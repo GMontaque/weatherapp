@@ -1,10 +1,12 @@
-import logo from "./logo.svg";
+import logo from "./weatherIMG.svg";
 import "./App.css";
-import SearchBar from "./components/SearchBar";
+import SearchBar from "./components/SearchAPI/SearchBar";
 import Card from "./components/weatherWidget/Card";
 import Starter from "./components/Starter";
 
 function App() {
+	// add state for result from searchBar API to pass to card
+
 	return (
 		<div className="App">
 			<header className="">

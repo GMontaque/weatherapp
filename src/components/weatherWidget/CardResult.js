@@ -3,16 +3,23 @@ import "./CardResult.css";
 function CardResult() {
 	return (
 		<div>
-			<h4>card reuslt - Day of the week</h4>
-			<img src="#" class="img-fluid" alt="" />
+			<h4>Monday</h4>
+			<img
+				src={""}
+				className="rounded-circle"
+				alt="daily weather img"
+				height="300rem"
+				width="300rem"
+			/>
+			<p>Summary: Sunny intervals and a gentle breeze</p>
 
-			<p>sun rise</p>
-			<p>sun set</p>
+			<p>sun rise: 07:23am</p>
+			<p>sun set: 19:44pm</p>
 
 			<div className="inner-Text">
-				<p>temp</p>
-				<p>wind</p>
-				<p>perciitations</p>
+				<p>temp Max/Min : 23C - 1C</p>
+				<p>wind speed: 10KMH</p>
+				<p>Rain: 20%</p>
 			</div>
 		</div>
 	);

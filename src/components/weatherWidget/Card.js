@@ -1,7 +1,7 @@
 import "./Card.css";
 import CardResult from "./CardResult";
 
-function Card(props) {
+function Card() {
 	return <CardResult />;
 }
 
