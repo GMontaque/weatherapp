@@ -8,14 +8,19 @@ function App() {
 	// add state for result from searchBar API to pass to card
 
 	return (
-		<div className="App">
-			<header className="">
-				<img src={logo} className="App-logo" alt="logo" />
+		<div className="container-fluid">
+			<div className="row">
+				<img src={logo} className="App-logo" alt="logos" />
+			</div>
+
+			<div className="row">
 				<SearchBar />
-			</header>
+			</div>
 			{/* add a conditon of starter is being shown card is not visible */}
-			<Starter />
-			<Card />
+			<div className="row">
+				<Starter />
+				<Card />
+			</div>
 		</div>
 	);
 }

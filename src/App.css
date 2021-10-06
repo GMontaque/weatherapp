@@ -1,11 +1,14 @@
-.App {
-	text-align: center;
+.container-fluid {
+	background-color: cornflowerblue;
 }
 
 .App-logo {
 	height: 40vmin;
-	pointer-events: none;
 }
+
+/* .App {
+	text-align: center;
+} */
 
 /* @media (prefers-reduced-motion: no-preference) {
 	.App-logo {
@@ -13,7 +16,7 @@
 	}
 } */
 
-.App-header {
+/* .App-header {
 	background-color: #282c34;
 	min-height: 100vh;
 	display: flex;
@@ -35,4 +38,4 @@
 	to {
 		transform: rotate(360deg);
 	}
-}
+} */
