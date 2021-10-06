@@ -6,11 +6,11 @@ function SearchBar() {
 	let dummy = ApiResult;
 	console.log(dummy);
 	return (
-		<nav className="navbar navbar-expand-md navbar-dark bg-dark">
-			<div className="d-flex flex-grow-1">
-				<a href="/" className="navbar-brand">
+		<nav className="navbar navbar-expand-md  backgroundColor">
+			<div className="d-flex flex-grow-1 backgroundNav">
+				{/* <a href="/" className="navbar-brand">
 					Codeply
-				</a>
+				</a> */}
 				<form className="mr-2 my-auto w-100 d-inline-block order-1">
 					<div className="input-group">
 						<input

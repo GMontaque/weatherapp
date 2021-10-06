@@ -10,10 +10,10 @@ function App() {
 	return (
 		<div className="container-fluid">
 			<div className="row">
-				<img src={logo} className="App-logo" alt="logos" />
+				<img src={logo} className="weather-logo" alt="logos" />
 			</div>
 
-			<div className="row">
+			<div className="row searchRow">
 				<SearchBar />
 			</div>
 			{/* add a conditon of starter is being shown card is not visible */}

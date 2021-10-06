@@ -2,8 +2,13 @@
 	background-color: cornflowerblue;
 }
 
-.App-logo {
-	height: 40vmin;
+.weather-logo {
+	height: 10rem;
+	width: 10rem;
+}
+
+.searchRow {
+	margin: 0rem 5rem;
 }
 
 /* .App {
