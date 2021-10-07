@@ -2,6 +2,33 @@
 	background-color: cornflowerblue;
 }
 
+.imgBackground {
+	animation-name: backgroundImg;
+	animation-duration: 100000000s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes backgroundImg {
+	0% {
+		background: url(logo.svg) fixed no-repeat;
+	}
+	20% {
+		background: url(weatherIMG.svg) fixed no-repeat;
+	}
+	40% {
+		background: url(Christmas_Trees.svg) fixed no-repeat;
+	}
+	60% {
+		background: url(logo.svg) fixed no-repeat;
+	}
+	80% {
+		background: url(weatherIMG.svg) fixed no-repeat;
+	}
+	100% {
+		background: url(Christmas_Trees.svg) fixed no-repeat;
+	}
+}
+
 .weather-logo {
 	height: 10rem;
 	width: 10rem;

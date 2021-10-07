@@ -2,37 +2,105 @@ import "./Starter.css";
 import exampleIMG from "../img/cloudsSunny.png";
 
 function Starter() {
+	let sunRise = <i class="fas fa-sun"></i>;
+	let sunSet = <i class="fas fa-moon"></i>;
+	let tempHigh = <i class="fas fa-temperature-high"></i>;
+	let tempLow = <i class="fas fa-temperature-low"></i>;
+	let wind = <i class="fas fa-wind"></i>;
+	let rain = <i class="fas fa-cloud-rain"></i>;
 	return (
-		<div>
-			<h2>Please see below instructions and example</h2>
+		<>
+			<h2 className="center">Please see below instructions and example</h2>
 			{/* description of how the website works */}
-			<p>
+			<p className="center">
 				Here you can search the weather for the next 7 days on any city, please
 				enter the city and press enter. below is an example of the results that
 				you will get back
 			</p>
 			{/* below will be an example of the results the user shoudl execpt */}
-			<div>
-				<h4>Example - Monday</h4>
-				<img
-					src={exampleIMG}
-					className="rounded-circle"
-					alt=""
-					height="300rem"
-					width="300rem"
-				/>
-				<p>Summary: Sunny intervals and a gentle breeze</p>
+			<div className="card-deck">
+				<div className="card center 1">
+					<h4 className="card-header ">Example - Monday</h4>
+					<img
+						src={exampleIMG}
+						className="rounded-circle img"
+						alt=""
+						height="200vh"
+						width="200vw"
+					/>
+					<h6>Sunny intervals and a gentle breeze</h6>
+					<div className="card-body">
+						{/* weather summary for the day */}
 
-				<p>sun rise: 07:23am</p>
-				<p>sun set: 19:44pm</p>
+						<div className="tempLayout ">
+							<p className="marginR">{sunRise} 07:23am</p>
+							<p>{sunSet} 19:44pm</p>
+						</div>
+						<div className="inner-Text list-group">
+							<p className="list-group-item">
+								{tempHigh}: 23C - {tempLow} 1C
+							</p>
+							<p className="list-group-item">{wind} 10KMH</p>
+							<p className="list-group-item">{rain} 20%</p>
+						</div>
+					</div>
+				</div>
 
-				<div className="inner-Text">
-					<p>temp Max/Min : 23C - 1C</p>
-					<p>wind speed: 10KMH</p>
-					<p>Rain: 20%</p>
+				<div className="card center 2">
+					<h4 className="card-header ">Example - Tuesday</h4>
+					<img
+						src={exampleIMG}
+						className="rounded-circle img"
+						alt=""
+						height="200vh"
+						width="200vw"
+					/>
+					<h6>Sunny intervals and a gentle breeze</h6>
+					<div className="card-body">
+						{/* weather summary for the day */}
+
+						<div className="tempLayout ">
+							<p className="marginR">{sunRise} 07:23am</p>
+							<p>{sunSet} 19:44pm</p>
+						</div>
+						<div className="inner-Text list-group">
+							<p className="list-group-item">
+								{tempHigh}: 23C - {tempLow} 1C
+							</p>
+							<p className="list-group-item">{wind} 10KMH</p>
+							<p className="list-group-item">{rain} 20%</p>
+						</div>
+					</div>
+				</div>
+
+				<div className="card center 3">
+					<h4 className="card-header ">Example - Wednesday</h4>
+					<img
+						src={exampleIMG}
+						className="rounded-circle img"
+						alt=""
+						height="200vh"
+						width="200vw"
+					/>
+					<h6>Sunny intervals and a gentle breeze</h6>
+					<div className="card-body">
+						{/* weather summary for the day */}
+
+						<div className="tempLayout ">
+							<p className="marginR">{sunRise} 07:23am</p>
+							<p>{sunSet} 19:44pm</p>
+						</div>
+						<div className="inner-Text list-group">
+							<p className="list-group-item">
+								{tempHigh}: 23C - {tempLow} 1C
+							</p>
+							<p className="list-group-item">{wind} 10KMH</p>
+							<p className="list-group-item">{rain} 20%</p>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 
