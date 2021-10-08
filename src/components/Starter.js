@@ -2,12 +2,12 @@ import "./Starter.css";
 import exampleIMG from "../img/cloudsSunny.png";
 
 function Starter() {
-	let sunRise = <i class="fas fa-sun"></i>;
-	let sunSet = <i class="fas fa-moon"></i>;
-	let tempHigh = <i class="fas fa-temperature-high"></i>;
-	let tempLow = <i class="fas fa-temperature-low"></i>;
-	let wind = <i class="fas fa-wind"></i>;
-	let rain = <i class="fas fa-cloud-rain"></i>;
+	let sunRise = <i className="fas fa-sun"></i>;
+	let sunSet = <i className="fas fa-moon"></i>;
+	let tempHigh = <i className="fas fa-temperature-high"></i>;
+	let tempLow = <i className="fas fa-temperature-low"></i>;
+	let wind = <i className="fas fa-wind"></i>;
+	let rain = <i className="fas fa-cloud-rain"></i>;
 	return (
 		<>
 			<h2 className="center">Please see below instructions and example</h2>
