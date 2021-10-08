@@ -10,23 +10,28 @@
 
 @keyframes backgroundImg {
 	0% {
-		background: url(logo.svg) fixed no-repeat;
+		background: url(./img/logo.svg) fixed no-repeat;
 	}
 	20% {
-		background: url(weatherIMG.svg) fixed no-repeat;
+		background: url(./img/weatherIMG.svg) fixed no-repeat;
 	}
 	40% {
-		background: url(Christmas_Trees.svg) fixed no-repeat;
+		background: url(./img/Christmas_Trees.svg) fixed no-repeat;
 	}
 	60% {
-		background: url(logo.svg) fixed no-repeat;
+		background: url(./img/logo.svg) fixed no-repeat;
 	}
 	80% {
-		background: url(weatherIMG.svg) fixed no-repeat;
+		background: url(./img/weatherIMG.svg) fixed no-repeat;
 	}
 	100% {
-		background: url(Christmas_Trees.svg) fixed no-repeat;
+		background: url(./img/Christmas_Trees.svg) fixed no-repeat;
 	}
+}
+
+.mainHeader {
+	text-align: center;
+	margin-top: 3rem;
 }
 
 .weather-logo {
@@ -35,7 +40,7 @@
 }
 
 .searchRow {
-	margin: 0rem 5rem;
+	margin: 3rem 5rem 2rem 5rem;
 }
 
 /* .App {

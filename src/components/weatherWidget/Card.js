@@ -1,8 +1,22 @@
 import "./Card.css";
 import CardResult from "./CardResult";
 
-function Card() {
-	return <CardResult />;
+function Card(props) {
+	console.log(props.tree[1]);
+	return (
+		<>
+			<button
+				type="button"
+				name=""
+				id="resetBtn"
+				className="btn btn-primary btn-lg "
+			>
+				<i className="fas fa-undo-alt"></i>
+			</button>
+
+			<CardResult />
+		</>
+	);
 }
 
 export default Card;

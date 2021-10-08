@@ -1,5 +1,5 @@
 import "./Starter.css";
-import exampleIMG from "../img/cloudsSunny.png";
+import exampleIMG from "../../img/cloudsSunny.png";
 
 function Starter() {
 	let sunRise = <i className="fas fa-sun"></i>;
@@ -8,9 +8,9 @@ function Starter() {
 	let tempLow = <i className="fas fa-temperature-low"></i>;
 	let wind = <i className="fas fa-wind"></i>;
 	let rain = <i className="fas fa-cloud-rain"></i>;
+
 	return (
 		<>
-			<h2 className="center">Please see below instructions and example</h2>
 			{/* description of how the website works */}
 			<p className="center">
 				Here you can search the weather for the next 7 days on any city, please

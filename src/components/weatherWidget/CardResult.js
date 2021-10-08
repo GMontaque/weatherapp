@@ -11,7 +11,7 @@ function CardResult() {
 	return (
 		<div className="card-deck">
 			<div className="card center 1">
-				<h4 className="card-header ">Example - Monday</h4>
+				<h4 className="card-header ">Card - Monday</h4>
 				<img
 					src={exampleIMG}
 					className="rounded-circle img"
@@ -38,7 +38,7 @@ function CardResult() {
 			</div>
 
 			<div className="card center 2">
-				<h4 className="card-header ">Example - Tuesday</h4>
+				<h4 className="card-header ">Card - Tuesday</h4>
 				<img
 					src={exampleIMG}
 					className="rounded-circle img"
@@ -65,7 +65,7 @@ function CardResult() {
 			</div>
 
 			<div className="card center 3">
-				<h4 className="card-header ">Example - Wednesday</h4>
+				<h4 className="card-header ">Card - Wednesday</h4>
 				<img
 					src={exampleIMG}
 					className="rounded-circle img"
