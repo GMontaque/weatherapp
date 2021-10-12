@@ -1,22 +1,39 @@
 import "./SearchBar.css";
-import ApiResult from "./API";
+import ApiSearch from "./API";
+import { useState } from "react";
 
 function SearchBar() {
 	// API code
-	let dummy = ApiResult;
-	console.log(dummy);
+	// let dummy = ApiSearch;
+	// console.log(dummy);
+
+	const [searchResult, setSearchResult] = useState();
+
+	const handleChange = (e) => {
+		setSearchResult(e.target.value);
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		alert("submitted full work " + searchResult);
+	};
+
 	return (
 		<nav className="navbar navbar-expand-md  backgroundColor">
 			<div className="d-flex flex-grow-1 backgroundNav">
 				{/* <a href="/" className="navbar-brand">
 					Codeply
 				</a> */}
-				<form className="mr-2 my-auto w-100 d-inline-block order-1">
+				<form
+					className="mr-2 my-auto w-100 d-inline-block order-1"
+					onSubmit={handleSubmit}
+				>
 					<div className="input-group">
 						<input
 							type="text"
 							className="form-control border border-right-0"
 							placeholder="Search..."
+							onChange={handleChange}
 						/>
 						<span className="input-group-append">
 							<button
@@ -28,6 +45,7 @@ function SearchBar() {
 						</span>
 					</div>
 				</form>
+				<ApiSearch searchWord={searchResult}></ApiSearch>
 			</div>
 		</nav>
 
