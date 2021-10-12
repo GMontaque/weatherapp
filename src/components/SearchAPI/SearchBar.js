@@ -16,6 +16,9 @@ function SearchBar() {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		alert("submitted full work " + searchResult);
+
+		// reset input field
+		// setSearchResult("");
 	};
 
 	return (
@@ -34,6 +37,9 @@ function SearchBar() {
 							className="form-control border border-right-0"
 							placeholder="Search..."
 							onChange={handleChange}
+
+							// resets field
+							// value={searchResult}
 						/>
 						<span className="input-group-append">
 							<button
