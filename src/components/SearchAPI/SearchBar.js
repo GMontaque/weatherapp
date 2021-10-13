@@ -9,14 +9,10 @@ function SearchBar() {
 
 	const [searchResult, setSearchResult] = useState();
 
-	const handleChange = (e) => {
-		setSearchResult(e.target.value);
-	};
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		alert("submitted full work " + searchResult);
 
+		setSearchResult(e.target.input.value);
 		// reset input field
 		// setSearchResult("");
 	};
@@ -36,7 +32,7 @@ function SearchBar() {
 							type="text"
 							className="form-control border border-right-0"
 							placeholder="Search..."
-							onChange={handleChange}
+							id="input"
 
 							// resets field
 							// value={searchResult}
@@ -54,25 +50,37 @@ function SearchBar() {
 				<ApiSearch searchWord={searchResult}></ApiSearch>
 			</div>
 		</nav>
+	);
+}
 
-		// <nav className="navbar navbar-light bg-light">
-		// 	<form className="form-inline">
-		// 		<input
-		// 			className="form-control mr-sm-2"
-		// 			type="search"
-		// 			placeholder="Search"
-		// 			aria-label="Search"
-		// 		/>
-		// 		<button
-		// 			className="btn btn-outline-success my-2 my-sm-0"
-		// 			type="submit"
-		// 		>
-		// 			Search
-		// 		</button>
-		// 	</form>
-		// </nav>
+export default SearchBar;
 
-		/* <div className="input-group">
+// const handleChange = (e) => {
+// 	setSearchResult(e.target.value);
+// };
+
+//onChange={handleChange}
+// console.log(e.target.input.value);
+// alert("submitted full work " + searchResult);
+
+// <nav className="navbar navbar-light bg-light">
+// 	<form className="form-inline">
+// 		<input
+// 			className="form-control mr-sm-2"
+// 			type="search"
+// 			placeholder="Search"
+// 			aria-label="Search"
+// 		/>
+// 		<button
+// 			className="btn btn-outline-success my-2 my-sm-0"
+// 			type="submit"
+// 		>
+// 			Search
+// 		</button>
+// 	</form>
+// </nav>
+
+/* <div className="input-group">
 			<div className="form-outline">
 				<input type="search" id="form1" className="form-control" />
 				<label className="form-label" id="form1">
@@ -83,13 +91,9 @@ function SearchBar() {
 				<i className="fas fa-search"></i>
 			</button>
 		</div> */
-		// <div>
-		// 	<input placeholder="search"></input>
-		// 	<button type="button" className="btn btn-primary">
-		// 		Submit
-		// 	</button>
-		// </div>
-	);
-}
-
-export default SearchBar;
+// <div>
+// 	<input placeholder="search"></input>
+// 	<button type="button" className="btn btn-primary">
+// 		Submit
+// 	</button>
+// </div>

@@ -71,7 +71,7 @@ function App() {
 		{
 			id: 6,
 			day: "saturday",
-			summary_weather: "heavy rain",
+			summary_weather: "heavyrain",
 			sun_rise: "0732",
 			sun_set: 1600,
 			temp_Max: 23,
@@ -83,7 +83,7 @@ function App() {
 		{
 			id: 7,
 			day: "sunday",
-			summary_weather: "sunnny and cloudy",
+			summary_weather: "sunnnyandcloudy",
 			sun_rise: "0732",
 			sun_set: 1600,
 			temp_Max: 23,

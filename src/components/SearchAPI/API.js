@@ -79,13 +79,22 @@ function ApiSearch(props) {
 	// 	},
 	// ];
 
-	console.log(props.searchWord);
-	// let itWorks = "";
-	// if (rome === props.searchWord) {
-	// 	return (itWorks = "result");
-	// }
+	let itWorks = [];
+	if ("rome" === props.searchWord) {
+		itWorks = {
+			day: "sunday",
+			summary_weather: "sunnny and cloudy",
+			sun_rise: "0732",
+			sun_set: 1600,
+			temp_Max: 23,
+			temp_Min: "01",
+			wind_speed: 10,
+			rain: 20,
+		};
+	}
 
-	return <p>{props.searchWord}</p>;
+	const returnResut = <p>{itWorks.day}</p>;
+	return returnResut;
 }
 
 export default ApiSearch;
