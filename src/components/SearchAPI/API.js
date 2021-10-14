@@ -93,7 +93,7 @@ function ApiSearch(props) {
 		};
 	}
 
-	const returnResut = <p>{itWorks.day}</p>;
+	const returnResut = [itWorks.day];
 	return returnResut;
 }
 
