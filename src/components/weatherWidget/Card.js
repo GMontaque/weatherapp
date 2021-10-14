@@ -28,20 +28,21 @@ function Card(props) {
 					<i className="fas fa-undo-alt"></i>
 				</button>
 			</div>
-
-			{props.weatherData.map((weatherDay) => (
-				<CardResult
-					key={weatherDay.id}
-					day={weatherDay.day}
-					summaryWeather={weatherDay.summary_weather}
-					sunRiseData={weatherDay.sun_rise}
-					sunSetData={weatherDay.sun_set}
-					tempMax={weatherDay.temp_Max}
-					tempMin={weatherDay.temp_Min}
-					windSpeed={weatherDay.wind_speed}
-					rainPercent={weatherDay.rain}
-				/>
-			))}
+			<div className="reSize row">
+				{props.weatherData.map((weatherDay) => (
+					<CardResult
+						key={weatherDay.id}
+						day={weatherDay.day}
+						summaryWeather={weatherDay.summary_weather}
+						sunRiseData={weatherDay.sun_rise}
+						sunSetData={weatherDay.sun_set}
+						tempMax={weatherDay.temp_Max}
+						tempMin={weatherDay.temp_Min}
+						windSpeed={weatherDay.wind_speed}
+						rainPercent={weatherDay.rain}
+					/>
+				))}
+			</div>
 		</>
 	);
 }

@@ -4,28 +4,24 @@ import { useState } from "react";
 
 function SearchBar() {
 	// API code
-	// let dummy = ApiSearch;
-	// console.log(dummy);
 
 	const [searchResult, setSearchResult] = useState();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-
 		setSearchResult(e.target.input.value);
+
 		// reset input field
-		// setSearchResult("");
+		document.getElementById("formBody").reset();
 	};
 
 	return (
 		<nav className="navbar navbar-expand-md  backgroundColor">
 			<div className="d-flex flex-grow-1 backgroundNav">
-				{/* <a href="/" className="navbar-brand">
-					Codeply
-				</a> */}
 				<form
 					className="mr-2 my-auto w-100 d-inline-block order-1"
 					onSubmit={handleSubmit}
+					id="formBody"
 				>
 					<div className="input-group">
 						<input
@@ -33,9 +29,6 @@ function SearchBar() {
 							className="form-control border border-right-0"
 							placeholder="Search..."
 							id="input"
-
-							// resets field
-							// value={searchResult}
 						/>
 						<span className="input-group-append">
 							<button
@@ -54,6 +47,22 @@ function SearchBar() {
 }
 
 export default SearchBar;
+
+// let dummy = ApiSearch;
+// console.log(dummy);
+// const returnValue = (event) => {
+// 	setreturnValueArray(event.target.value);
+// };
+
+// console.log(returnValueArray);
+
+/* <a href="/" className="navbar-brand">
+					Codeply
+				</a> */
+
+// resets field
+// value={searchResult}
+//resultReturn={returnValue}
 
 // const handleChange = (e) => {
 // 	setSearchResult(e.target.value);

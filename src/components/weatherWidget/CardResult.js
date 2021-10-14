@@ -62,7 +62,7 @@ function CardResult(props) {
 	// }
 
 	return (
-		<div className="card center 1">
+		<div className="card center">
 			<h4 className="card-header ">Card - {props.day}</h4>
 			<img
 				src={dayImg}
