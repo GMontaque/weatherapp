@@ -100,7 +100,14 @@ function App() {
 		setMessage(childData);
 	};
 
-	console.log("data from api " + message);
+	//total array
+	console.log("total array " + message.day);
+
+	// passing search result array to card components idea
+	// let SearchResultWeather = [message];
+	// //total array
+	// console.log("total array " + SearchResultWeather);
+
 	return (
 		<div className="container-fluid imgBackground">
 			{/* <div className="row">

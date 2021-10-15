@@ -1,16 +1,19 @@
 import "./SearchBar.css";
-import ApiSearch from "./API";
+// import ApiSearch from "./API";
 import { useState } from "react";
 
 function SearchBar(props) {
 	// API code
 
 	const [searchResult, setSearchResult] = useState();
-
+	// let itWorks = "";
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setSearchResult(e.target.input.value);
-		props.parentCallback(e.target.input.value);
+
+		if ("rome" === e.target.input.value) {
+			dataStream();
+		}
 
 		// reset input field
 		document.getElementById("formBody").reset();
@@ -18,12 +21,31 @@ function SearchBar(props) {
 		// returnValue(e);
 	};
 
+	function dataStream() {
+		props.parentCallback({
+			day: "sunday bar",
+			summary_weather: "sunnny and cloudy",
+			sun_rise: "0732",
+			sun_set: 1600,
+			temp_Max: 23,
+			temp_Min: "01",
+			wind_speed: 10,
+			rain: 20,
+		});
+	}
+
+	console.log(searchResult);
+
 	// api result event
 	// const [messageSecond, setMessageSecond] = useState();
 
 	// const callbackFunctionSecond = (childDataSecond) => {
 	// 	setMessageSecond(childDataSecond);
-	// 	props.parentCallback(childDataSecond);
+	// 	props.parentCallback(messageSecond);
+	// };
+
+	// const returnValue = (r) => {
+	// 	props.parentCallback(r);
 	// };
 
 	// console.log(messageSecond);
@@ -53,22 +75,16 @@ function SearchBar(props) {
 						</span>
 					</div>
 				</form>
-				<ApiSearch
+				{/* <ApiSearch
 					searchWord={searchResult}
-					// parentCallBackSecond={callbackFunctionSecond}
-				></ApiSearch>
+					//parentCallBackSecond={callbackFunctionSecond}
+				></ApiSearch> */}
 			</div>
 		</nav>
 	);
 }
 
 export default SearchBar;
-
-// const returnValue = (r) => {
-// 	props.parentCallback(r);
-// };
-
-// console.log(messageSecond);
 
 // let dummy = ApiSearch;
 // console.log(dummy);
