@@ -101,7 +101,7 @@ function App() {
 	};
 
 	//total array
-	console.log("total array " + message.day);
+	console.log("total array " + message);
 
 	// passing search result array to card components idea
 	// let SearchResultWeather = [message];
