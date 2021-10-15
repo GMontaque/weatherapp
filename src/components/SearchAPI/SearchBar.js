@@ -2,7 +2,7 @@ import "./SearchBar.css";
 import ApiSearch from "./API";
 import { useState } from "react";
 
-function SearchBar() {
+function SearchBar(props) {
 	// API code
 
 	const [searchResult, setSearchResult] = useState();
@@ -10,10 +10,23 @@ function SearchBar() {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setSearchResult(e.target.input.value);
+		props.parentCallback(e.target.input.value);
 
 		// reset input field
 		document.getElementById("formBody").reset();
+
+		// returnValue(e);
 	};
+
+	// api result event
+	// const [messageSecond, setMessageSecond] = useState();
+
+	// const callbackFunctionSecond = (childDataSecond) => {
+	// 	setMessageSecond(childDataSecond);
+	// 	props.parentCallback(childDataSecond);
+	// };
+
+	// console.log(messageSecond);
 
 	return (
 		<nav className="navbar navbar-expand-md  backgroundColor">
@@ -40,13 +53,22 @@ function SearchBar() {
 						</span>
 					</div>
 				</form>
-				<ApiSearch searchWord={searchResult}></ApiSearch>
+				<ApiSearch
+					searchWord={searchResult}
+					// parentCallBackSecond={callbackFunctionSecond}
+				></ApiSearch>
 			</div>
 		</nav>
 	);
 }
 
 export default SearchBar;
+
+// const returnValue = (r) => {
+// 	props.parentCallback(r);
+// };
+
+// console.log(messageSecond);
 
 // let dummy = ApiSearch;
 // console.log(dummy);

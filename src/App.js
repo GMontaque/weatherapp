@@ -4,6 +4,7 @@ import SearchBar from "./components/SearchAPI/SearchBar";
 // import Card from "./components/weatherWidget/Card";
 // import Starter from "./mainPage/Starter";
 import CondtionalPage from "./components/mainPage/Conditional";
+import { useState } from "react";
 
 function App() {
 	// add state for result from searchBar API to pass to card
@@ -93,6 +94,13 @@ function App() {
 		},
 	];
 
+	const [message, setMessage] = useState();
+
+	const callbackFunction = (childData) => {
+		setMessage(childData);
+	};
+
+	console.log("data from api " + message);
 	return (
 		<div className="container-fluid imgBackground">
 			{/* <div className="row">
@@ -102,7 +110,7 @@ function App() {
 			</div> */}
 
 			<div className="row searchRow">
-				<SearchBar />
+				<SearchBar parentCallback={callbackFunction} />
 			</div>
 			{/* add a conditon of starter is being shown card is not visible */}
 			<div className="row">

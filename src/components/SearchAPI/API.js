@@ -1,3 +1,5 @@
+// import { useState } from "react";
+
 function ApiSearch(props) {
 	// API code
 	// let rome = [
@@ -79,6 +81,16 @@ function ApiSearch(props) {
 	// 	},
 	// ];
 
+	// ---------------------------------------call back attempt------------------------------------------------------------
+
+	// const ApiCheck = () => {
+	// 	props.parentCallBackSecond(itWorks);
+	// };
+
+	// props.parentCallback(itWorks);
+
+	// const [third, setThird] = useState();
+
 	let itWorks = [];
 	if ("rome" === props.searchWord) {
 		itWorks = {
@@ -93,8 +105,7 @@ function ApiSearch(props) {
 		};
 	}
 
-	const returnResut = [itWorks.day];
-	return returnResut;
+	return <>{itWorks.day} </>;
 }
 
 export default ApiSearch;
