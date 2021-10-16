@@ -12,7 +12,11 @@ function CondtionalPage(props) {
 		weatherCards = <Starter />;
 	} else {
 		weatherCards = (
-			<Card weatherData={props.ApiData} parentReset={buttonReset} />
+			<Card
+				weatherData={props.ApiData}
+				parentReset={buttonReset}
+				searchTitle={props.searchWord}
+			/>
 		);
 	}
 

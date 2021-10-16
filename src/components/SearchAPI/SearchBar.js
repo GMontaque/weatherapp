@@ -5,13 +5,15 @@ function SearchBar(props) {
 	// API search result
 	const [searchResult, setSearchResult] = useState();
 
+	console.log(searchResult);
+
 	// submit of search word
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setSearchResult(e.target.input.value);
 
 		if ("rome" === e.target.input.value) {
-			dataStream();
+			dataStream(e.target.input.value);
 		}
 
 		// reset input field
@@ -19,8 +21,9 @@ function SearchBar(props) {
 	};
 
 	// api search result returned to parent component
-	function dataStream() {
-		props.parentCallback([
+	function dataStream(val) {
+		props.searchWordResult(val);
+		props.resultValueArray([
 			{
 				id: 1,
 				day: "monday",
@@ -107,8 +110,6 @@ function SearchBar(props) {
 		]);
 	}
 
-	console.log(searchResult);
-
 	return (
 		<nav className="navbar navbar-expand-md  backgroundColor">
 			<div className="d-flex flex-grow-1 backgroundNav">
@@ -134,10 +135,6 @@ function SearchBar(props) {
 						</span>
 					</div>
 				</form>
-				{/* <ApiSearch
-					searchWord={searchResult}
-					//parentCallBackSecond={callbackFunctionSecond}
-				></ApiSearch> */}
 			</div>
 		</nav>
 	);
@@ -146,6 +143,11 @@ function SearchBar(props) {
 export default SearchBar;
 
 // import ApiSearch from "./API";
+
+/* <ApiSearch
+					searchWord={searchResult}
+					//parentCallBackSecond={callbackFunctionSecond}
+				></ApiSearch> */
 
 // api result event
 // const [messageSecond, setMessageSecond] = useState();

@@ -4,7 +4,8 @@
 
 .imgBackground {
 	animation-name: backgroundImg;
-	animation-duration: 100000000s;
+	/* 100s seems the a good amount of time */
+	animation-duration: 1000000s;
 	animation-iteration-count: infinite;
 }
 

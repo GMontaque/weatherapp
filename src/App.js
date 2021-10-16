@@ -5,45 +5,54 @@ import CondtionalPage from "./components/mainPage/Conditional";
 import { useState } from "react";
 
 function App() {
-	// API value from search Bar
+	// API search value from search Bar
 	const [message, setMessage] = useState();
 
-	const callbackFunction = (childData) => {
+	const callbackSearchResult = (childData) => {
 		setMessage(childData);
 	};
 
-	//checking state value before passing to conditional
+	// search word
+	const [searchWord, setsearchWord] = useState();
 
-	if (message !== undefined) {
-		let house = JSON.stringify(message[0]);
-		console.log("it worked" + house);
-	}
+	const callBackSearchWord = (childData) => {
+		setsearchWord(childData);
+	};
 
 	return (
 		<div className="container-fluid imgBackground">
-			{/* <div className="row">
-				might remmove title? 
-				 <h1 className="mainHeader">7 Day Weather Forcast</h1> 
-				 <img src={logo} className="weather-logo" alt="logos" /> 
-			</div> */}
-
 			<div className="row searchRow">
-				<SearchBar parentCallback={callbackFunction} />
+				<SearchBar
+					resultValueArray={callbackSearchResult}
+					searchWordResult={callBackSearchWord}
+				/>
 			</div>
 			{/* add a conditon of starter is being shown card is not visible */}
 			<div className="row">
 				<h1 className="center">7 Day Weather Forcast</h1>
-				<CondtionalPage ApiData={message} />
+				<CondtionalPage ApiData={message} searchWord={searchWord} />
 			</div>
-			{/* <br />
-			<div className="row">
-				<Card />
-			</div> */}
 		</div>
 	);
 }
 
 export default App;
+
+//checking state value before passing to conditional
+// if (message !== undefined) {
+// 	let house = JSON.stringify(message[0]);
+// 	console.log("it worked" + house);
+// }
+
+/* <div className="row">
+				might remmove title? 
+				 <h1 className="mainHeader">7 Day Weather Forcast</h1> 
+				 <img src={logo} className="weather-logo" alt="logos" /> 
+			</div> */
+/* <br />
+			<div className="row">
+				<Card />
+			</div> */
 
 // import logo from "./weatherIMG.svg";
 // import Card from "./components/weatherWidget/Card";

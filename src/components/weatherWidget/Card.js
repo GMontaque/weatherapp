@@ -32,6 +32,7 @@ function Card(props) {
 				>
 					<i className="fas fa-undo-alt"></i>
 				</button>
+				<h1 className="center">{props.searchTitle}</h1>
 			</div>
 			<div className="reSize row">
 				{props.weatherData.map((weatherDay) => (
