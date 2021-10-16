@@ -1,112 +1,23 @@
-// import logo from "./weatherIMG.svg";
 import "./App.css";
 import SearchBar from "./components/SearchAPI/SearchBar";
-// import Card from "./components/weatherWidget/Card";
-// import Starter from "./mainPage/Starter";
+
 import CondtionalPage from "./components/mainPage/Conditional";
 import { useState } from "react";
 
 function App() {
-	// add state for result from searchBar API to pass to card
-	let SearchResultWeather = [
-		{
-			id: 1,
-			day: "monday",
-			summary_weather: "sunny",
-			sun_rise: "0732",
-			sun_set: 1600,
-			temp_Max: 23,
-			temp_Min: "01",
-			wind_speed: 10,
-			rain: 20,
-		},
-
-		{
-			id: 2,
-			day: "tuesday",
-			summary_weather: "cloud",
-			sun_rise: "0732",
-			sun_set: 1600,
-			temp_Max: 23,
-			temp_Min: "01",
-			wind_speed: 10,
-			rain: 20,
-		},
-
-		{
-			id: 3,
-			day: "wednesday",
-			summary_weather: "rain",
-			sun_rise: "0732",
-			sun_set: 1600,
-			temp_Max: 23,
-			temp_Min: "01",
-			wind_speed: 10,
-			rain: 20,
-		},
-
-		{
-			id: 4,
-			day: "thursday",
-			summary_weather: "snow",
-			sun_rise: "0732",
-			sun_set: 1600,
-			temp_Max: 23,
-			temp_Min: "01",
-			wind_speed: 10,
-			rain: 20,
-		},
-
-		{
-			id: 5,
-			day: "friday",
-			summary_weather: "thunder",
-			sun_rise: "0732",
-			sun_set: 1600,
-			temp_Max: 23,
-			temp_Min: "01",
-			wind_speed: 10,
-			rain: 20,
-		},
-
-		{
-			id: 6,
-			day: "saturday",
-			summary_weather: "heavyrain",
-			sun_rise: "0732",
-			sun_set: 1600,
-			temp_Max: 23,
-			temp_Min: "01",
-			wind_speed: 10,
-			rain: 20,
-		},
-
-		{
-			id: 7,
-			day: "sunday",
-			summary_weather: "sunnnyandcloudy",
-			sun_rise: "0732",
-			sun_set: 1600,
-			temp_Max: 23,
-			temp_Min: "01",
-			wind_speed: 10,
-			rain: 20,
-		},
-	];
-
+	// API value from search Bar
 	const [message, setMessage] = useState();
 
 	const callbackFunction = (childData) => {
 		setMessage(childData);
 	};
 
-	//total array
-	console.log("total array " + message);
+	//checking state value before passing to conditional
 
-	// passing search result array to card components idea
-	// let SearchResultWeather = [message];
-	// //total array
-	// console.log("total array " + SearchResultWeather);
+	if (message !== undefined) {
+		let house = JSON.stringify(message[0]);
+		console.log("it worked" + house);
+	}
 
 	return (
 		<div className="container-fluid imgBackground">
@@ -122,7 +33,7 @@ function App() {
 			{/* add a conditon of starter is being shown card is not visible */}
 			<div className="row">
 				<h1 className="center">7 Day Weather Forcast</h1>
-				<CondtionalPage ApiData={SearchResultWeather} />
+				<CondtionalPage ApiData={message} />
 			</div>
 			{/* <br />
 			<div className="row">
@@ -133,3 +44,104 @@ function App() {
 }
 
 export default App;
+
+// import logo from "./weatherIMG.svg";
+// import Card from "./components/weatherWidget/Card";
+// import Starter from "./mainPage/Starter";
+
+// add state for result from searchBar API to pass to card
+// let SearchResultWeather = [
+// 	{
+// 		id: 1,
+// 		day: "monday",
+// 		summary_weather: "sunny",
+// 		sun_rise: "0732",
+// 		sun_set: 1600,
+// 		temp_Max: 23,
+// 		temp_Min: "01",
+// 		wind_speed: 10,
+// 		rain: 20,
+// 	},
+
+// 	{
+// 		id: 2,
+// 		day: "tuesday",
+// 		summary_weather: "cloud",
+// 		sun_rise: "0732",
+// 		sun_set: 1600,
+// 		temp_Max: 23,
+// 		temp_Min: "01",
+// 		wind_speed: 10,
+// 		rain: 20,
+// 	},
+
+// 	{
+// 		id: 3,
+// 		day: "wednesday",
+// 		summary_weather: "rain",
+// 		sun_rise: "0732",
+// 		sun_set: 1600,
+// 		temp_Max: 23,
+// 		temp_Min: "01",
+// 		wind_speed: 10,
+// 		rain: 20,
+// 	},
+
+// 	{
+// 		id: 4,
+// 		day: "thursday",
+// 		summary_weather: "snow",
+// 		sun_rise: "0732",
+// 		sun_set: 1600,
+// 		temp_Max: 23,
+// 		temp_Min: "01",
+// 		wind_speed: 10,
+// 		rain: 20,
+// 	},
+
+// 	{
+// 		id: 5,
+// 		day: "friday",
+// 		summary_weather: "thunder",
+// 		sun_rise: "0732",
+// 		sun_set: 1600,
+// 		temp_Max: 23,
+// 		temp_Min: "01",
+// 		wind_speed: 10,
+// 		rain: 20,
+// 	},
+
+// 	{
+// 		id: 6,
+// 		day: "saturday",
+// 		summary_weather: "heavyrain",
+// 		sun_rise: "0732",
+// 		sun_set: 1600,
+// 		temp_Max: 23,
+// 		temp_Min: "01",
+// 		wind_speed: 10,
+// 		rain: 20,
+// 	},
+
+// 	{
+// 		id: 7,
+// 		day: "sunday",
+// 		summary_weather: "sunnnyandcloudy",
+// 		sun_rise: "0732",
+// 		sun_set: 1600,
+// 		temp_Max: 23,
+// 		temp_Min: "01",
+// 		wind_speed: 10,
+// 		rain: 20,
+// 	},
+// ];
+
+// const displayObject = () => {
+// 	house = JSON.stringify(message);
+
+// };
+
+// passing search result array to card components idea
+// let SearchResultWeather = [message];
+// //total array
+// console.log("total array " + SearchResultWeather);

@@ -16,6 +16,10 @@ function Card(props) {
 
 	// console.log(cardIcon);
 
+	function changePage() {
+		props.parentReset(true);
+	}
+
 	return (
 		<>
 			<div>
@@ -24,6 +28,7 @@ function Card(props) {
 					name=""
 					id="resetBtn"
 					className="btn btn-primary btn-lg "
+					onClick={changePage}
 				>
 					<i className="fas fa-undo-alt"></i>
 				</button>

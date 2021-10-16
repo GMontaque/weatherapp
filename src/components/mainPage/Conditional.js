@@ -1,26 +1,36 @@
 import Starter from "./Starter";
 import Card from "../weatherWidget/Card";
 
-function condtionalPage(props) {
+function CondtionalPage(props) {
+	const buttonReset = () => {
+		window.location.reload(false);
+	};
 	// when input is empty starter will show, when user submits the form card will show
-	let weatherCards = <Starter />;
+	let weatherCards;
 
-	if (1 > 0) {
-		return (weatherCards = <Card weatherData={props.ApiData} />);
+	if (props.ApiData === undefined) {
+		weatherCards = <Starter />;
+	} else {
+		weatherCards = (
+			<Card weatherData={props.ApiData} parentReset={buttonReset} />
+		);
 	}
-
-	// if (filteredExpense.length > 0) {
-	// 	expensesContent = filteredExpense.map((expense) => (
-	// 		<Card
-	// 			key={expense.id}
-	// 			title={expense.title}
-	// 			amount={expense.amount}
-	// 			date={expense.date}
-	// 		/>
-	// 	));
-	// }
 
 	return weatherCards;
 }
 
-export default condtionalPage;
+export default CondtionalPage;
+
+// import { useState } from "react";
+// const [buttonCheck, setButtonCheck] = useState();
+
+// if (filteredExpense.length > 0) {
+// 	expensesContent = filteredExpense.map((expense) => (
+// 		<Card
+// 			key={expense.id}
+// 			title={expense.title}
+// 			amount={expense.amount}
+// 			date={expense.date}
+// 		/>
+// 	));
+// }

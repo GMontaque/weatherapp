@@ -1,12 +1,11 @@
 import "./SearchBar.css";
-// import ApiSearch from "./API";
 import { useState } from "react";
 
 function SearchBar(props) {
-	// API code
-
+	// API search result
 	const [searchResult, setSearchResult] = useState();
-	// let itWorks = "";
+
+	// submit of search word
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setSearchResult(e.target.input.value);
@@ -17,38 +16,98 @@ function SearchBar(props) {
 
 		// reset input field
 		document.getElementById("formBody").reset();
-
-		// returnValue(e);
 	};
 
+	// api search result returned to parent component
 	function dataStream() {
-		props.parentCallback({
-			day: "sunday bar",
-			summary_weather: "sunnny and cloudy",
-			sun_rise: "0732",
-			sun_set: 1600,
-			temp_Max: 23,
-			temp_Min: "01",
-			wind_speed: 10,
-			rain: 20,
-		});
+		props.parentCallback([
+			{
+				id: 1,
+				day: "monday",
+				summary_weather: "sunny",
+				sun_rise: "0732",
+				sun_set: 1600,
+				temp_Max: 23,
+				temp_Min: "01",
+				wind_speed: 10,
+				rain: 20,
+			},
+
+			{
+				id: 2,
+				day: "tuesday",
+				summary_weather: "cloud",
+				sun_rise: "0732",
+				sun_set: 1600,
+				temp_Max: 23,
+				temp_Min: "01",
+				wind_speed: 10,
+				rain: 20,
+			},
+
+			{
+				id: 3,
+				day: "wednesday",
+				summary_weather: "rain",
+				sun_rise: "0732",
+				sun_set: 1600,
+				temp_Max: 23,
+				temp_Min: "01",
+				wind_speed: 10,
+				rain: 20,
+			},
+
+			{
+				id: 4,
+				day: "thursday",
+				summary_weather: "snow",
+				sun_rise: "0732",
+				sun_set: 1600,
+				temp_Max: 23,
+				temp_Min: "01",
+				wind_speed: 10,
+				rain: 20,
+			},
+
+			{
+				id: 5,
+				day: "friday",
+				summary_weather: "thunder",
+				sun_rise: "0732",
+				sun_set: 1600,
+				temp_Max: 23,
+				temp_Min: "01",
+				wind_speed: 10,
+				rain: 20,
+			},
+
+			{
+				id: 6,
+				day: "saturday",
+				summary_weather: "heavyrain",
+				sun_rise: "0732",
+				sun_set: 1600,
+				temp_Max: 23,
+				temp_Min: "01",
+				wind_speed: 10,
+				rain: 20,
+			},
+
+			{
+				id: 7,
+				day: "sunday",
+				summary_weather: "sunnnyandcloudy",
+				sun_rise: "0732",
+				sun_set: 1600,
+				temp_Max: 23,
+				temp_Min: "01",
+				wind_speed: 10,
+				rain: 20,
+			},
+		]);
 	}
 
 	console.log(searchResult);
-
-	// api result event
-	// const [messageSecond, setMessageSecond] = useState();
-
-	// const callbackFunctionSecond = (childDataSecond) => {
-	// 	setMessageSecond(childDataSecond);
-	// 	props.parentCallback(messageSecond);
-	// };
-
-	// const returnValue = (r) => {
-	// 	props.parentCallback(r);
-	// };
-
-	// console.log(messageSecond);
 
 	return (
 		<nav className="navbar navbar-expand-md  backgroundColor">
@@ -85,6 +144,22 @@ function SearchBar(props) {
 }
 
 export default SearchBar;
+
+// import ApiSearch from "./API";
+
+// api result event
+// const [messageSecond, setMessageSecond] = useState();
+
+// const callbackFunctionSecond = (childDataSecond) => {
+// 	setMessageSecond(childDataSecond);
+// 	props.parentCallback(messageSecond);
+// };
+
+// const returnValue = (r) => {
+// 	props.parentCallback(r);
+// };
+
+// console.log(messageSecond);
 
 // let dummy = ApiSearch;
 // console.log(dummy);
