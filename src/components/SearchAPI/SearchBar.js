@@ -4,6 +4,7 @@ import { useState } from "react";
 function SearchBar(props) {
 	// API search result
 	const [searchResult, setSearchResult] = useState();
+	const [ApiResult, setApiResult] = useState();
 
 	console.log(searchResult);
 
@@ -13,12 +14,24 @@ function SearchBar(props) {
 		setSearchResult(e.target.input.value);
 
 		if ("rome" === e.target.input.value) {
+			ApiSendRequest();
 			dataStream(e.target.input.value);
 		}
 
 		// reset input field
 		document.getElementById("formBody").reset();
 	};
+
+	function ApiSendRequest() {
+		// Simple GET request using fetch
+		fetch(
+			"http://api.openweathermap.org/data/2.5/weather?q=london&appid=878a4f623d8afad8416ca819b1bc4a4c"
+			// "http://api.openweathermap.org/data/2.5/forecast/daily?q=london&cnt=7&appid=878a4f623d8afad8416ca819b1bc4a4c"
+		)
+			.then((response) => response.json())
+			.then((data) => setApiResult(data));
+	}
+	console.log(ApiResult);
 
 	// api search result returned to parent component
 	function dataStream(val) {
