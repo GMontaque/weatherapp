@@ -14,22 +14,21 @@ function SearchBar(props) {
 		setSearchResult(e.target.input.value);
 
 		if ("rome" === e.target.input.value) {
-			ApiSendRequest();
-			dataStream(e.target.input.value);
+			ApiSendRequest(e.target.input.value);
 		}
 
 		// reset input field
 		document.getElementById("formBody").reset();
 	};
 
-	function ApiSendRequest() {
+	function ApiSendRequest(city) {
 		// Simple GET request using fetch
 		fetch(
-			"http://api.openweathermap.org/data/2.5/weather?q=london&appid=878a4f623d8afad8416ca819b1bc4a4c"
-			// "http://api.openweathermap.org/data/2.5/forecast/daily?q=london&cnt=7&appid=878a4f623d8afad8416ca819b1bc4a4c"
+			`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=878a4f623d8afad8416ca819b1bc4a4c`
 		)
 			.then((response) => response.json())
 			.then((data) => setApiResult(data));
+		dataStream(city);
 	}
 	console.log(ApiResult);
 
