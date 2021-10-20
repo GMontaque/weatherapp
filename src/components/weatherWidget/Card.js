@@ -45,7 +45,12 @@ function Card(props) {
 						sunRiseData={weathe.sunrise}
 						sunSetData={weathe.sunset}
 						day={weathe.dt}
-						summaryWeather={"rain"}
+						summaryWeather={weathe.weather.map((weath) => {
+							return weath.main;
+						})}
+						description={weathe.weather.map((weath) => {
+							return weath.description;
+						})}
 						tempMax={weathe.temp.max}
 						tempMin={weathe.temp.min}
 						windSpeed={weathe.wind_speed}

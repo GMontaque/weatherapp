@@ -16,22 +16,45 @@ function CardResult(props) {
 	let rain = <i className="fas fa-cloud-rain"></i>;
 
 	let summaryWeatherText = props.summaryWeather;
+	console.log(props.summaryWeather);
 	let dayImg = {};
-	if (summaryWeatherText === "sunny") {
-		dayImg = sunnyIMG;
-	} else if (summaryWeatherText === "cloud") {
-		dayImg = cloud;
-	} else if (summaryWeatherText === "rain") {
-		dayImg = rainImg;
-	} else if (summaryWeatherText === "snow") {
-		dayImg = heavyRain;
-	} else if (summaryWeatherText === "thunder") {
-		dayImg = sun;
-	} else if (summaryWeatherText === "heavyrain") {
-		dayImg = snow;
-	} else if (summaryWeatherText === "sunnnyandcloudy") {
+	if (summaryWeatherText === "Thunderstorm") {
 		dayImg = thunder;
+	} else if (summaryWeatherText === "Rain" || "Drizzle") {
+		dayImg = rainImg;
+	} else if (summaryWeatherText === "Snow") {
+		dayImg = snow;
+	} else if (summaryWeatherText === "Mist" || "Smoke" || "Haze") {
+		dayImg = heavyRain;
+	} else if (summaryWeatherText === "Dust" || "Sand") {
+		dayImg = thunder;
+	} else if (summaryWeatherText === "Fog") {
+		dayImg = sun;
+	} else if (summaryWeatherText === "Clear") {
+		dayImg = sunnyIMG;
+	} else if (summaryWeatherText === "Clouds") {
+		dayImg = cloud;
 	}
+
+	// if (summaryWeatherText === "Thunderstorm") {
+	// 	dayImg = thunder;
+	// }
+	// else if (summaryWeatherText === "Rain" || "Drizzle") {
+	// 	dayImg = rainImg;
+	// }
+	// else if (summaryWeatherText === "Snow") {
+	// 	dayImg = snow;
+	// } else if (summaryWeatherText === "Mist" || "Smoke" || "Haze") {
+	// 	dayImg = heavyRain;
+	// } else if (summaryWeatherText === "Dust" || "Sand") {
+	// 	dayImg = thunder;
+	// } else if (summaryWeatherText === "Fog") {
+	// 	dayImg = sun;
+	// } else if (summaryWeatherText === "Clear") {
+	// 	dayImg = sunnyIMG;
+	// } else if (summaryWeatherText === "Clouds") {
+	// 	dayImg = cloud;
+	// }
 
 	// generate date
 	const date = new Date(props.day * 1000);
@@ -66,7 +89,7 @@ function CardResult(props) {
 				height="200vh"
 				width="200vw"
 			/>
-			<h6>{props.summaryWeather}</h6>
+			<h6>{props.description}</h6>
 			<div className="card-body">
 				{/* weather summary for the day */}
 
