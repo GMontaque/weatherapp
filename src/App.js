@@ -19,18 +19,32 @@ function App() {
 		setsearchWord(childData);
 	};
 
+	// api result
+	const [rainWord, setrainWord] = useState();
+
+	const callBackrainWord = (childData) => {
+		setrainWord(childData);
+	};
+
+	console.log(rainWord);
+
 	return (
 		<div className="container-fluid imgBackground">
 			<div className="row searchRow">
 				<SearchBar
 					resultValueArray={callbackSearchResult}
 					searchWordResult={callBackSearchWord}
+					testsearchResult={callBackrainWord}
 				/>
 			</div>
 			{/* add a conditon of starter is being shown card is not visible */}
 			<div className="row">
 				<h1 className="center">7 Day Weather Forcast</h1>
-				<CondtionalPage ApiData={message} searchWord={searchWord} />
+				<CondtionalPage
+					ApiData={message}
+					searchWord={searchWord}
+					testApiData={rainWord}
+				/>
 			</div>
 		</div>
 	);

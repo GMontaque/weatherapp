@@ -5,6 +5,7 @@ function CondtionalPage(props) {
 	const buttonReset = () => {
 		window.location.reload(false);
 	};
+	console.log(props.testApiData);
 	// when input is empty starter will show, when user submits the form card will show
 	let weatherCards;
 
@@ -16,6 +17,7 @@ function CondtionalPage(props) {
 				weatherData={props.ApiData}
 				parentReset={buttonReset}
 				searchTitle={props.searchWord}
+				warfare={props.testApiData}
 			/>
 		);
 	}

@@ -33,37 +33,32 @@ function CardResult(props) {
 		dayImg = thunder;
 	}
 
-	// let cardIMG = props.summaryWeather
+	// generate date
+	const date = new Date(props.day * 1000);
+	let days = date.toLocaleDateString("en-US");
 
-	// switch (cardIMG) {
-	// 	case sunny:
-	// 		// code block
-	// 		break;
-	// 	case cloud:
-	// 		// code block
-	// 		break;
-	// 	case rain:
-	// 		// code block
-	// 		break;
-	// 	case snow:
-	// 		// code block
-	// 		break;
-	// 	case thunder:
-	// 		// code block
-	// 		break;
-	// 	case heavyrain:
-	// 		// code block
-	// 		break;
-	// 	case sunnnyandcloudy:
-	// 		// code block
-	// 		break;
-	// 	default:
-	// 	// code block
-	// }
+	function getDayName(dateStr, locale) {
+		let date = new Date(dateStr);
+		return date.toLocaleDateString(locale, { weekday: "long" });
+	}
+	let day = getDayName(days, "en-GB");
+
+	// sun rise and set
+	const timeSunRise = new Date(props.sunRiseData * 1000);
+	let extractedSunRise = timeSunRise.toLocaleTimeString([], {
+		hour: "2-digit",
+		minute: "2-digit",
+	});
+
+	const timeSunSet = new Date(props.sunSetData * 1000);
+	let extractedSunSet = timeSunSet.toLocaleTimeString([], {
+		hour: "2-digit",
+		minute: "2-digit",
+	});
 
 	return (
 		<div className="card center">
-			<h4 className="card-header ">Card - {props.day}</h4>
+			<h4 className="card-header ">{day}</h4>
 			<img
 				src={dayImg}
 				className="rounded-circle img"
@@ -77,10 +72,10 @@ function CardResult(props) {
 
 				<div className="tempLayout ">
 					<p className="marginR">
-						{sunRise} {props.sunRiseData}am
+						{sunRise} {extractedSunRise}am
 					</p>
 					<p>
-						{sunSet} {props.sunSetData}pm
+						{sunSet} {extractedSunSet}pm
 					</p>
 				</div>
 				<div className="inner-Text list-group">
@@ -100,3 +95,31 @@ function CardResult(props) {
 }
 
 export default CardResult;
+
+// let cardIMG = props.summaryWeather
+
+// switch (cardIMG) {
+// 	case sunny:
+// 		// code block
+// 		break;
+// 	case cloud:
+// 		// code block
+// 		break;
+// 	case rain:
+// 		// code block
+// 		break;
+// 	case snow:
+// 		// code block
+// 		break;
+// 	case thunder:
+// 		// code block
+// 		break;
+// 	case heavyrain:
+// 		// code block
+// 		break;
+// 	case sunnnyandcloudy:
+// 		// code block
+// 		break;
+// 	default:
+// 	// code block
+// }
