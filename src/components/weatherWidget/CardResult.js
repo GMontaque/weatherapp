@@ -15,25 +15,27 @@ function CardResult(props) {
 	let wind = <i className="fas fa-wind"></i>;
 	let rain = <i className="fas fa-cloud-rain"></i>;
 
-	let summaryWeatherText = props.summaryWeather;
+	let obj = props.summaryWeather;
+	const myJSON = JSON.stringify(obj);
 
-	console.log(typeof props.summaryWeather);
+	console.log(myJSON);
+
 	let dayImg = {};
-	if (summaryWeatherText === "Thunderstorm") {
+	if (myJSON === "Thunderstorm") {
 		dayImg = thunder;
-	} else if (summaryWeatherText === "Rain" || "Drizzle") {
+	} else if (myJSON === "Rain" || "Drizzle") {
 		dayImg = rainImg;
-	} else if (summaryWeatherText === "Snow") {
+	} else if (myJSON === "Snow") {
 		dayImg = snow;
-	} else if (summaryWeatherText === "Mist" || "Smoke" || "Haze") {
+	} else if (myJSON === "Mist" || "Smoke" || "Haze") {
 		dayImg = heavyRain;
-	} else if (summaryWeatherText === "Dust" || "Sand") {
+	} else if (myJSON === "Dust" || "Sand") {
 		dayImg = thunder;
-	} else if (summaryWeatherText === "Fog") {
+	} else if (myJSON === "Fog") {
 		dayImg = sun;
-	} else if (summaryWeatherText === "Clear") {
+	} else if (myJSON === "Clear") {
 		dayImg = sunnyIMG;
-	} else if (summaryWeatherText === "Clouds") {
+	} else if (myJSON === "Clouds") {
 		dayImg = cloud;
 	}
 

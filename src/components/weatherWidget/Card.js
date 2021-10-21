@@ -5,7 +5,7 @@ function Card(props) {
 	// let data = props.weatherData[1];
 	// console.log(data);
 
-	console.log("result from search " + props.warfare);
+	// console.log("result from search " + props.warfare);
 
 	function changePage() {
 		props.parentReset(true);
