@@ -5,9 +5,14 @@ function CondtionalPage(props) {
 	const buttonReset = () => {
 		window.location.reload(false);
 	};
-	console.log(props.testApiData);
+
+	//console.log("conditional data " + props.testApiData);
 	// when input is empty starter will show, when user submits the form card will show
+
 	let weatherCards;
+
+	// testapidata has the correct data
+	// props.testApiData
 
 	if (props.ApiData === undefined) {
 		weatherCards = <Starter />;

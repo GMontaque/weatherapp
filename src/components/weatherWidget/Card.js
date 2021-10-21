@@ -2,8 +2,10 @@ import "./Card.css";
 import CardResult from "./CardResult";
 
 function Card(props) {
-	let data = props.weatherData[1];
-	console.log(data);
+	// let data = props.weatherData[1];
+	// console.log(data);
+
+	console.log("result from search " + props.warfare);
 
 	function changePage() {
 		props.parentReset(true);
@@ -24,21 +26,26 @@ function Card(props) {
 				<h1 className="center">{props.searchTitle}</h1>
 			</div>
 			<div className="reSize row">
-				{props.weatherData.map((weatherDay) => (
+				{props.weatherData.daily.map((weatherDay) => (
 					<CardResult
-						key={weatherDay.id}
-						day={weatherDay.day}
-						summaryWeather={weatherDay.summary_weather}
-						sunRiseData={weatherDay.sun_rise}
-						sunSetData={weatherDay.sun_set}
-						tempMax={weatherDay.temp_Max}
-						tempMin={weatherDay.temp_Min}
+						key={Math.random()}
+						sunRiseData={weatherDay.sunrise}
+						sunSetData={weatherDay.sunset}
+						day={weatherDay.dt}
+						summaryWeather={weatherDay.weather.map((weath) => {
+							return weath.main;
+						})}
+						description={weatherDay.weather.map((weath) => {
+							return weath.description;
+						})}
+						tempMax={weatherDay.temp.max}
+						tempMin={weatherDay.temp.min}
 						windSpeed={weatherDay.wind_speed}
 						rainPercent={weatherDay.rain}
 					/>
 				))}
 			</div>
-			<div className="reSize row">
+			{/* <div className="reSize row">
 				{props.warfare.daily.map((weathe) => (
 					<CardResult
 						key={Math.random()}
@@ -57,7 +64,7 @@ function Card(props) {
 						rainPercent={weathe.rain}
 					/>
 				))}
-			</div>
+			</div> */}
 		</>
 	);
 }

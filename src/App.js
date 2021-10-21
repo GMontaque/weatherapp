@@ -26,7 +26,7 @@ function App() {
 		setrainWord(childData);
 	};
 
-	console.log(rainWord);
+	//console.log("app " + rainWord);
 
 	return (
 		<div className="container-fluid imgBackground">

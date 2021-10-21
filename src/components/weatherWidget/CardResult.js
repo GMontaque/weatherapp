@@ -16,7 +16,8 @@ function CardResult(props) {
 	let rain = <i className="fas fa-cloud-rain"></i>;
 
 	let summaryWeatherText = props.summaryWeather;
-	console.log(props.summaryWeather);
+
+	console.log(typeof props.summaryWeather);
 	let dayImg = {};
 	if (summaryWeatherText === "Thunderstorm") {
 		dayImg = thunder;
