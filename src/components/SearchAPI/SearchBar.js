@@ -15,6 +15,11 @@ function SearchBar(props) {
 
 		if ("rome" === e.target.input.value) {
 			// ApiSendRequest(e.target.input.value);
+			fetch(
+				`https://api.openweathermap.org/data/2.5/weather?q=${e.target.input.value}&appid=128944992833eb85f19eeebe5415027c`
+			)
+				.then((response) => response.json())
+				.then((data) => ApiSendRequest(data.coord));
 			dataStream(e.target.input.value);
 		}
 
@@ -22,17 +27,16 @@ function SearchBar(props) {
 		document.getElementById("formBody").reset();
 	};
 
-	// function ApiSendRequest(city) {
-	// 	// Simple GET request using fetch
-	// 	fetch(
-	// 		//`https://api.openweathermap.org/geo/1.0/direct?q=london&limit=1&appid=128944992833eb85f19eeebe5415027c`
-	// 		`https://api.openweathermap.org/data/2.5/onecall?lat=41.90&lon=12.49&exclude=minutely,hourly,alert,current&units=metric&appid=128944992833eb85f19eeebe5415027c`
-	// 		//`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=878a4f623d8afad8416ca819b1bc4a4c`
-	// 	)
-	// 		.then((response) => response.json())
-	// 		.then((data) => setApiResult(data));
-	// 	dataStream(city);
-	// }
+	function ApiSendRequest({ lat, lon }) {
+		// Simple GET request using fetch
+		fetch(
+			`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alert,current&units=metric&appid=128944992833eb85f19eeebe5415027c`
+			//`appid=878a4f623d8afad8416ca819b1bc4a4c`
+		)
+			.then((response) => response.json())
+			.then((data) => console.log("result" + data)); //setApiResult(data));
+		// dataStream(city);
+	}
 	// console.log(ApiResult);
 
 	// api search result returned to parent component
