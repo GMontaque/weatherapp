@@ -6,13 +6,15 @@ function CondtionalPage(props) {
 		window.location.reload(false);
 	};
 
-	//console.log("conditional data " + props.testApiData);
 	// when input is empty starter will show, when user submits the form card will show
 
 	let weatherCards;
 
-	// testapidata has the correct data
+	/* ---------------------------------------real card to use ----------------------------------------- */
+
 	// props.testApiData
+
+	/* ---------------------------------------test card to use ----------------------------------------- */
 
 	if (props.ApiData === undefined) {
 		weatherCards = <Starter />;
@@ -31,6 +33,8 @@ function CondtionalPage(props) {
 }
 
 export default CondtionalPage;
+
+//console.log("conditional data " + props.testApiData);
 
 // import { useState } from "react";
 // const [buttonCheck, setButtonCheck] = useState();

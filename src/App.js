@@ -41,8 +41,10 @@ function App() {
 			<div className="row">
 				<h1 className="center">7 Day Weather Forcast</h1>
 				<CondtionalPage
-					ApiData={message}
 					searchWord={searchWord}
+					/* ---------------------------------------test card to use ----------------------------------------- */
+					ApiData={message}
+					/* ---------------------------------------real card to use ----------------------------------------- */
 					testApiData={rainWord}
 				/>
 			</div>

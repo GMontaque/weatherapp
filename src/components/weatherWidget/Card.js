@@ -25,6 +25,7 @@ function Card(props) {
 				</button>
 				<h1 className="center">{props.searchTitle}</h1>
 			</div>
+			{/* --------------------------------------test card to use ----------------------------------------- */}
 			<div className="reSize row">
 				{props.weatherData.daily.map((weatherDay) => (
 					<CardResult
@@ -45,6 +46,7 @@ function Card(props) {
 					/>
 				))}
 			</div>
+			{/* ---------------------------------------real card to use ----------------------------------------- */}
 			{/* <div className="reSize row">
 				{props.warfare.daily.map((weathe) => (
 					<CardResult
