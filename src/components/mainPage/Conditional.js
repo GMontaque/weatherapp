@@ -2,17 +2,17 @@ import Starter from "./Starter";
 import Card from "../weatherWidget/Card";
 
 function CondtionalPage(props) {
+	// reset page to intial state
 	const buttonReset = () => {
 		window.location.reload(false);
 	};
 
-	// when input is empty starter will show, when user submits the form card will show
-
+	// varaible is updated depending on if data is recevied
 	let weatherCards;
 
 	/* ---------------------------------------real card to use ----------------------------------------- */
 
-	// props.testApiData
+	// props.ApiDataObject
 
 	/* ---------------------------------------test card to use ----------------------------------------- */
 
@@ -21,10 +21,12 @@ function CondtionalPage(props) {
 	} else {
 		weatherCards = (
 			<Card
+				// testcode --------------------------------------------
 				weatherData={props.ApiData}
-				parentReset={buttonReset}
+				// testcode above ----------------------------------
+				pageReset={buttonReset}
 				searchTitle={props.searchWord}
-				warfare={props.testApiData}
+				apiObject={props.ApiDataObject}
 			/>
 		);
 	}

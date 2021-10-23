@@ -1,16 +1,12 @@
 import { useState } from "react";
-// const [searchResult, setSearchResult] = useState();
-// const [ApiResult, setApiResult] = useState();
-
-// console.log(searchResult);
 import "./SearchBar.css";
 
 function SearchBar(props) {
-	// API search result
-
 	// submit of search word
 	const handleSubmit = (e) => {
 		e.preventDefault();
+
+		// search word value
 		props.searchWordResult(e.target.input.value);
 
 		/* --------------------------------------test card to use ----------------------------------------- */
@@ -341,7 +337,8 @@ function SearchBar(props) {
 
 		/* --------------------------------------test card to use above ----------------------------------------- */
 
-		//ApiSendRequest(e.target.input.value);
+		// not needed --------------- ApiSendRequest(e.target.input.value);
+		// city name API reqeust, returns lat and lon
 		// fetch(
 		// 	`https://api.openweathermap.org/data/2.5/weather?q=${e.target.input.value}&appid=128944992833eb85f19eeebe5415027c`
 		// )
@@ -352,34 +349,34 @@ function SearchBar(props) {
 		// 		} else {
 		// 			ApiSendRequest(data.coord);
 		// 		}
-		// 	}); //ApiSendRequest(data.coord));
+		// 	});
 
-		// reset input field
+		// reset input field and form
 		document.getElementById("formBody").reset();
-		setSearchResult("Reset to search again");
+		setSearchPlaceholder("Reset to search again");
 	};
 
 	// function ApiSendRequest({ lat, lon }) {
-	// 	// Simple GET request using fetch
+	// 	// API reqeust for 8 days weather data
 	// 	fetch(
 	// 		`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alert,current&units=metric&appid=128944992833eb85f19eeebe5415027c`
 	// 		//`appid=878a4f623d8afad8416ca819b1bc4a4c`
 	// 	)
 	// 		.then((response) => response.json())
-	// 		.then((data) => dataStream(data)); //setApiResult(data));
+	// 		.then((data) => dataStream(data));
 	// }
 
-	//api search result returned to parent component
+	//api search result returned to app component
 	// function dataStream(val) {
 	// 	console.log(val);
-	// 	props.testsearchResult(val);
+	// 	props.apiDataResult(val);
 	// }
 
 	// input validation - only letters allowed
-	const [searchResult, setSearchResult] = useState("Search...");
+	const [SearchPlaceholder, setSearchPlaceholder] = useState("Search...");
 
 	let lettersOnly = (e) => {
-		setSearchResult(e.target.value.replace(/[^a-zA-z]/, ""));
+		setSearchPlaceholder(e.target.value.replace(/[^a-zA-z]/, ""));
 	};
 
 	return (
@@ -395,7 +392,7 @@ function SearchBar(props) {
 							type="text"
 							className="form-control border border-right-0"
 							id="input"
-							placeholder={searchResult}
+							placeholder={SearchPlaceholder}
 							onChange={lettersOnly}
 							required
 						/>
@@ -415,6 +412,11 @@ function SearchBar(props) {
 }
 
 export default SearchBar;
+
+// const [searchResult, setSearchResult] = useState();
+// const [ApiResult, setApiResult] = useState();
+
+// console.log(searchResult);
 
 // console.log(ApiResult);
 // dataStream(city);

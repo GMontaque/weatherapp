@@ -5,12 +5,14 @@ import CondtionalPage from "./components/mainPage/Conditional";
 import { useState } from "react";
 
 function App() {
-	// API search value from search Bar
+	// dummy call back -----------------------------
 	const [message, setMessage] = useState();
 
 	const callbackSearchResult = (childData) => {
 		setMessage(childData);
 	};
+
+	// dummy call back above------------------------
 
 	// search word
 	const [searchWord, setsearchWord] = useState();
@@ -20,10 +22,10 @@ function App() {
 	};
 
 	// api result
-	const [rainWord, setrainWord] = useState();
+	const [ApiData, setApiData] = useState();
 
-	const callBackrainWord = (childData) => {
-		setrainWord(childData);
+	const callBackApiData = (childData) => {
+		setApiData(childData);
 	};
 
 	//console.log("app " + rainWord);
@@ -32,9 +34,11 @@ function App() {
 		<div className="container-fluid imgBackground">
 			<div className="row searchRow">
 				<SearchBar
+					// dummy code----------------------
 					resultValueArray={callbackSearchResult}
+					// dummy code above---------------------
 					searchWordResult={callBackSearchWord}
-					testsearchResult={callBackrainWord}
+					apiDataResult={callBackApiData}
 				/>
 			</div>
 			{/* add a conditon of starter is being shown card is not visible */}
@@ -45,7 +49,7 @@ function App() {
 					/* ---------------------------------------test card to use ----------------------------------------- */
 					ApiData={message}
 					/* ---------------------------------------real card to use ----------------------------------------- */
-					testApiData={rainWord}
+					ApiDataObject={ApiData}
 				/>
 			</div>
 		</div>

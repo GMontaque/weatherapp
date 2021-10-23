@@ -11,7 +11,7 @@
 
 @keyframes backgroundImg {
 	0% {
-		background: url(./img/logo.svg) fixed no-repeat;
+		background: url(./img/sunnyLandscape.jpg) fixed no-repeat;
 	}
 	20% {
 		background: url(./img/weatherIMG.svg) fixed no-repeat;

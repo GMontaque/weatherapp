@@ -2,13 +2,8 @@ import "./Card.css";
 import CardResult from "./CardResult";
 
 function Card(props) {
-	// let data = props.weatherData[1];
-	// console.log(data);
-
-	// console.log("result from search " + props.warfare);
-
-	function changePage() {
-		props.parentReset(true);
+	function refreshPage() {
+		props.pageReset(true);
 	}
 
 	return (
@@ -19,7 +14,7 @@ function Card(props) {
 					name=""
 					id="resetBtn"
 					className="btn btn-primary btn-lg "
-					onClick={changePage}
+					onClick={refreshPage}
 				>
 					<i className="fas fa-undo-alt"></i>
 				</button>
@@ -48,22 +43,22 @@ function Card(props) {
 			</div>
 			{/* ---------------------------------------real card to use ----------------------------------------- */}
 			{/* <div className="reSize row">
-				{props.warfare.daily.map((weathe) => (
+				{props.apiObject.daily.map((resultPerDay) => (
 					<CardResult
 						key={Math.random()}
-						sunRiseData={weathe.sunrise}
-						sunSetData={weathe.sunset}
-						day={weathe.dt}
-						summaryWeather={weathe.weather.map((weath) => {
+						sunRiseData={resultPerDay.sunrise}
+						sunSetData={resultPerDay.sunset}
+						day={resultPerDay.dt}
+						summaryWeather={resultPerDay.weather.map((weath) => {
 							return weath.main;
 						})}
-						description={weathe.weather.map((weath) => {
+						description={resultPerDay.weather.map((weath) => {
 							return weath.description;
 						})}
-						tempMax={weathe.temp.max}
-						tempMin={weathe.temp.min}
-						windSpeed={weathe.wind_speed}
-						rainPercent={weathe.rain}
+						tempMax={resultPerDay.temp.max}
+						tempMin={resultPerDay.temp.min}
+						windSpeed={resultPerDay.wind_speed}
+						rainPercent={resultPerDay.rain}
 					/>
 				))}
 			</div> */}
@@ -72,6 +67,11 @@ function Card(props) {
 }
 
 export default Card;
+
+// let data = props.weatherData[1];
+// console.log(data);
+
+// console.log("result from search " + props.warfare);
 
 // let cardIcon = {
 // 	sunRise: <i className="fas fa-sun"></i>,
