@@ -1,15 +1,29 @@
-.container-fluid {
-	background-color: cornflowerblue;
+.searchRow {
+	margin: 3rem 5rem 2rem 5rem;
 }
 
-.imgBackground {
+/* .mainHeader {
+	text-align: center;
+	margin-top: 3rem;
+}
+
+.weather-logo {
+	height: 10rem;
+	width: 10rem;
+} */
+
+/* .container-fluid {
+	background-color: yellow;
+} */
+
+/* .imgBackground { 
 	animation-name: backgroundImg;
 	/* 100s seems the a good amount of time */
-	animation-duration: 1000000s;
+/* animation-duration: 1000000s;
 	animation-iteration-count: infinite;
-}
+}  */
 
-@keyframes backgroundImg {
+/* @keyframes backgroundImg {
 	0% {
 		background: url(./img/sunnyLandscape.jpg) fixed no-repeat;
 	}
@@ -28,21 +42,7 @@
 	100% {
 		background: url(./img/Christmas_Trees.svg) fixed no-repeat;
 	}
-}
-
-.mainHeader {
-	text-align: center;
-	margin-top: 3rem;
-}
-
-.weather-logo {
-	height: 10rem;
-	width: 10rem;
-}
-
-.searchRow {
-	margin: 3rem 5rem 2rem 5rem;
-}
+} */
 
 /* .App {
 	text-align: center;

@@ -42,8 +42,8 @@ function App() {
 				/>
 			</div>
 			{/* add a conditon of starter is being shown card is not visible */}
-			<div className="row">
-				<h1 className="center">7 Day Weather Forcast</h1>
+			<div className="row ">
+				<h1 className="center">8 Day Weather Forcast</h1>
 				<CondtionalPage
 					searchWord={searchWord}
 					/* ---------------------------------------test card to use ----------------------------------------- */

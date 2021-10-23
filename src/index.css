@@ -7,10 +7,45 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: cornflowerblue;
+	animation-name: backgroundImg;
+	/* 100s seems the a good amount of time */
+	animation-duration: 10000s;
+	/* 40s  */
+	animation-iteration-count: infinite;
 }
 
-code {
+@keyframes backgroundImg {
+	0% {
+		background: url(./img/sunnyLandscape.jpg) no-repeat center center fixed;
+		background-size: cover;
+	}
+	20% {
+		background: url(./img/nightSky.jpg) no-repeat center center fixed;
+		background-size: cover;
+	}
+	40% {
+		background: url(./img/seatOutdoors.jpg) no-repeat center center fixed;
+		background-size: cover;
+	}
+	60% {
+		background: url(./img/valleyLandscape.jpg) no-repeat center center fixed;
+		background-size: cover;
+	}
+	80% {
+		background: url(./img/rain.jpg) no-repeat center center fixed;
+		background-size: cover;
+	}
+	100% {
+		background: url(./img/greenFoggy.jpg) no-repeat center center fixed;
+		background-size: cover;
+	}
+}
+
+#root {
+	margin-top: -2.5rem;
+}
+
+/* code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
-}
+} */

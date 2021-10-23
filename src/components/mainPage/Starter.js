@@ -18,7 +18,7 @@ function Starter() {
 				you will get back
 			</p>
 			{/* below will be an example of the results the user shoudl execpt */}
-			<div className="card-deck">
+			<div className="row spacing">
 				<div className="card center 1">
 					<h4 className="card-header ">Example - Monday</h4>
 					<img
