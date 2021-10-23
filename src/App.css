@@ -1,5 +1,14 @@
 .searchRow {
-	margin: 3rem 5rem 2rem 5rem;
+	margin: 3rem 0rem 2rem 0rem;
+	margin-left: 8%;
+	margin-right: 8%;
+}
+
+@media (max-width: 426px) {
+	.searchRow {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 /* .mainHeader {
