@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./SearchBar.css";
+// import Swal from "sweetalert2";
+// import withReactContent from "sweetalert2-react-content";
 
 function SearchBar(props) {
 	// submit of search word
@@ -337,7 +339,6 @@ function SearchBar(props) {
 
 		/* --------------------------------------test card to use above ----------------------------------------- */
 
-		// not needed --------------- ApiSendRequest(e.target.input.value);
 		// city name API reqeust, returns lat and lon
 		// fetch(
 		// 	`https://api.openweathermap.org/data/2.5/weather?q=${e.target.input.value}&appid=128944992833eb85f19eeebe5415027c`
@@ -345,7 +346,13 @@ function SearchBar(props) {
 		// 	.then((response) => response.json())
 		// 	.then((data) => {
 		// 		if (data.message === "city not found") {
-		// 			alert("city not found");
+		// 			const MySwal = withReactContent(Swal);
+
+		// 			MySwal.fire({
+		// 				icon: "error",
+		// 				title: "Error",
+		// 				text: "City not found",
+		// 			});
 		// 		} else {
 		// 			ApiSendRequest(data.coord);
 		// 		}

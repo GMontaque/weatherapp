@@ -12,10 +12,9 @@ function Starter() {
 	return (
 		<>
 			{/* description of how the website works */}
-			<p className="center">
-				Here you can search the weather for the next 7 days on any city, please
-				enter the city and press enter. below is an example of the results that
-				you will get back
+			<p className="center summaryText">
+				Here you can search the weather for the next 8 days of any city, simply
+				enter the city name. See below is an example of what you can expect.
 			</p>
 			{/* below will be an example of the results the user shoudl execpt */}
 			<div className="row spacing">

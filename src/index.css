@@ -9,34 +9,34 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	animation-name: backgroundImg;
 	/* 100s seems the a good amount of time */
-	animation-duration: 10000s;
+	animation-duration: 40000s;
 	/* 40s  */
 	animation-iteration-count: infinite;
 }
 
 @keyframes backgroundImg {
 	0% {
-		background: url(./img/sunnyLandscape.jpg) no-repeat center center fixed;
-		background-size: cover;
-	}
-	20% {
-		background: url(./img/nightSky.jpg) no-repeat center center fixed;
-		background-size: cover;
-	}
-	40% {
-		background: url(./img/seatOutdoors.jpg) no-repeat center center fixed;
-		background-size: cover;
-	}
-	60% {
 		background: url(./img/valleyLandscape.jpg) no-repeat center center fixed;
 		background-size: cover;
 	}
+	20% {
+		background: url(./img/sunnyLandscape.jpg) no-repeat center center fixed;
+		background-size: cover;
+	}
+	40% {
+		background: url(./img/foggyTrees.jpg) no-repeat center center fixed;
+		background-size: cover;
+	}
+	60% {
+		background: url(./img/blurRain.jpg) no-repeat center center fixed;
+		background-size: cover;
+	}
 	80% {
-		background: url(./img/rain.jpg) no-repeat center center fixed;
+		background: url(./img/greenFog.jpg) no-repeat center center fixed;
 		background-size: cover;
 	}
 	100% {
-		background: url(./img/greenFoggy.jpg) no-repeat center center fixed;
+		background: url(./img/thunder.jpg) no-repeat center center fixed;
 		background-size: cover;
 	}
 }

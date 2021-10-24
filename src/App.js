@@ -28,8 +28,6 @@ function App() {
 		setApiData(childData);
 	};
 
-	//console.log("app " + rainWord);
-
 	return (
 		<div className="container-fluid imgBackground">
 			<div className="row searchRow">

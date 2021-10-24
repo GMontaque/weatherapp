@@ -82,6 +82,14 @@ function CardResult(props) {
 		minute: "2-digit",
 	});
 
+	// rain value
+	let rainValueMM;
+	if (props.rainPercent === undefined) {
+		rainValueMM = "0";
+	} else {
+		rainValueMM = props.rainPercent;
+	}
+
 	return (
 		<div className="card center">
 			<h4 className="card-header ">{day}</h4>
@@ -112,7 +120,7 @@ function CardResult(props) {
 						{wind} {props.windSpeed}KMH
 					</p>
 					<p className="list-group-item">
-						{rain} {props.rainPercent}%
+						{rain} {rainValueMM} MM
 					</p>
 				</div>
 			</div>
