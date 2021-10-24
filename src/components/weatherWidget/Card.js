@@ -8,17 +8,17 @@ function Card(props) {
 
 	return (
 		<>
-			<div>
+			<div className="grid-container">
 				<button
 					type="button"
 					name=""
 					id="resetBtn"
-					className="btn btn-primary btn-lg "
+					className="btn btn-primary btn-lg item1"
 					onClick={refreshPage}
 				>
 					<i className="fas fa-undo-alt"></i>
 				</button>
-				<h1 className="center">{props.searchTitle}</h1>
+				<h1 className="center titleSize">{props.searchTitle}</h1>
 			</div>
 			{/* --------------------------------------test card to use ----------------------------------------- */}
 			<div className="reSize row">

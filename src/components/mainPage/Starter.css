@@ -7,6 +7,12 @@
 	width: 20rem;
 }
 
+@media (max-width: 321px) {
+	.card {
+		width: 16rem;
+	}
+}
+
 .tempLayout {
 	display: inline-flex;
 }
