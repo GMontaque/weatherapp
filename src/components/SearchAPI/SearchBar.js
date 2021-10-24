@@ -13,7 +13,7 @@ function SearchBar(props) {
 
 		// city name API reqeust, returns lat and lon
 		fetch(
-			`https://api.openweathermap.org/data/2.5/weather?q=${e.target.input.value}&appid=128944992833eb85f19eeebe5415027c`
+			`https://api.openweathermap.org/data/2.5/weather?q=${e.target.input.value}&appid=878a4f623d8afad8416ca819b1bc4a4c`
 		)
 			.then((response) => response.json())
 			.then((data) => {
@@ -38,7 +38,7 @@ function SearchBar(props) {
 	function ApiSendRequest({ lat, lon }) {
 		// API reqeust for 8 days weather data
 		fetch(
-			`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alert,current&units=metric&appid=128944992833eb85f19eeebe5415027c`
+			`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alert,current&units=metric&appid=878a4f623d8afad8416ca819b1bc4a4c`
 			//`appid=878a4f623d8afad8416ca819b1bc4a4c`
 		)
 			.then((response) => response.json())
