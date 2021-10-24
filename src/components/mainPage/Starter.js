@@ -1,5 +1,7 @@
 import "./Starter.css";
-import exampleIMG from "../../img/cloudsSunny.png";
+import thunder from "../../img/testThunder.png";
+import snow from "../../img/testSnow.png";
+import clear from "../../img/testClear.png";
 
 function Starter() {
 	let sunRise = <i className="fas fa-sun"></i>;
@@ -21,7 +23,7 @@ function Starter() {
 				<div className="card center 1">
 					<h4 className="card-header ">Example - Monday</h4>
 					<img
-						src={exampleIMG}
+						src={thunder}
 						className="rounded-circle img"
 						alt=""
 						height="200vh"
@@ -48,7 +50,7 @@ function Starter() {
 				<div className="card center 2">
 					<h4 className="card-header ">Example - Tuesday</h4>
 					<img
-						src={exampleIMG}
+						src={clear}
 						className="rounded-circle img"
 						alt=""
 						height="200vh"
@@ -75,7 +77,7 @@ function Starter() {
 				<div className="card center 3">
 					<h4 className="card-header ">Example - Wednesday</h4>
 					<img
-						src={exampleIMG}
+						src={snow}
 						className="rounded-circle img"
 						alt=""
 						height="200vh"

@@ -1,11 +1,11 @@
 import "./CardResult.css";
-import sunnyIMG from "../../img/cloudsSunny.png";
-import cloud from "../../img/cloud.png";
-import rainImg from "../../img/rain.png";
-import heavyRain from "../../img/heavyRain.png";
-import sun from "../../img/sun.png";
-import snow from "../../img/snow.png";
-import thunder from "../../img/thunder.png";
+import thunder from "../../img/testThunder.png";
+import rainImg from "../../img/testRain.png";
+import snow from "../../img/testSnow.png";
+import MSHFImg from "../../img/testFog.png";
+import sand from "../../img/testSand.png";
+import clear from "../../img/testClear.png";
+import cloud from "../../img/testCloud.png";
 
 function CardResult(props) {
 	let sunRise = <i className="fas fa-sun"></i>;
@@ -15,49 +15,31 @@ function CardResult(props) {
 	let wind = <i className="fas fa-wind"></i>;
 	let rain = <i className="fas fa-cloud-rain"></i>;
 
-	let obj = props.summaryWeather;
-	const myJSON = JSON.stringify(obj);
+	let imgTitle = props.summaryWeather;
+	let imgResultWord = imgTitle.toString();
 
-	console.log(myJSON);
-
-	let dayImg = {};
-	if (myJSON === "Thunderstorm") {
+	let dayImg;
+	if (imgResultWord === "Thunderstorm") {
 		dayImg = thunder;
-	} else if (myJSON === "Rain" || "Drizzle") {
+	} else if (imgResultWord === "Rain" || imgResultWord === "Drizzle") {
 		dayImg = rainImg;
-	} else if (myJSON === "Snow") {
+	} else if (imgResultWord === "Snow") {
 		dayImg = snow;
-	} else if (myJSON === "Mist" || "Smoke" || "Haze") {
-		dayImg = heavyRain;
-	} else if (myJSON === "Dust" || "Sand") {
-		dayImg = thunder;
-	} else if (myJSON === "Fog") {
-		dayImg = sun;
-	} else if (myJSON === "Clear") {
-		dayImg = sunnyIMG;
-	} else if (myJSON === "Clouds") {
+	} else if (
+		imgResultWord === "Mist" ||
+		imgResultWord === "Smoke" ||
+		imgResultWord === "Haze"
+	) {
+		dayImg = MSHFImg;
+	} else if (imgResultWord === "Dust" || imgResultWord === "Sand") {
+		dayImg = sand;
+	} else if (imgResultWord === "Fog") {
+		dayImg = MSHFImg;
+	} else if (imgResultWord === "Clear") {
+		dayImg = clear;
+	} else if (imgResultWord === "Clouds") {
 		dayImg = cloud;
 	}
-
-	// if (summaryWeatherText === "Thunderstorm") {
-	// 	dayImg = thunder;
-	// }
-	// else if (summaryWeatherText === "Rain" || "Drizzle") {
-	// 	dayImg = rainImg;
-	// }
-	// else if (summaryWeatherText === "Snow") {
-	// 	dayImg = snow;
-	// } else if (summaryWeatherText === "Mist" || "Smoke" || "Haze") {
-	// 	dayImg = heavyRain;
-	// } else if (summaryWeatherText === "Dust" || "Sand") {
-	// 	dayImg = thunder;
-	// } else if (summaryWeatherText === "Fog") {
-	// 	dayImg = sun;
-	// } else if (summaryWeatherText === "Clear") {
-	// 	dayImg = sunnyIMG;
-	// } else if (summaryWeatherText === "Clouds") {
-	// 	dayImg = cloud;
-	// }
 
 	// generate date
 	const date = new Date(props.day * 1000);
@@ -130,6 +112,41 @@ function CardResult(props) {
 
 export default CardResult;
 
+// if (imgResultWord === "Rain" || "Drizzle") {
+// 	dayImg = rainImg;
+// } else if (imgResultWord === "Snow") {
+// 	dayImg = snow;
+// } else if (imgResultWord === "Mist" || "Smoke" || "Haze") {
+// 	dayImg = heavyRain;
+// } else if (imgResultWord === "Dust" || "Sand") {
+// 	dayImg = sun;
+// } else if (imgResultWord === "Fog") {
+// 	dayImg = sun;
+// } else if (imgResultWord === "Clear") {
+// 	dayImg = sunnyIMG;
+// } else if (imgResultWord === "Clouds") {
+// 	dayImg = cloud;
+// }
+
+// if (summaryWeatherText === "Thunderstorm") {
+// 	dayImg = thunder;
+// }
+// else if (summaryWeatherText === "Rain" || "Drizzle") {
+// 	dayImg = rainImg;
+// }
+// else if (summaryWeatherText === "Snow") {
+// 	dayImg = snow;
+// } else if (summaryWeatherText === "Mist" || "Smoke" || "Haze") {
+// 	dayImg = heavyRain;
+// } else if (summaryWeatherText === "Dust" || "Sand") {
+// 	dayImg = thunder;
+// } else if (summaryWeatherText === "Fog") {
+// 	dayImg = sun;
+// } else if (summaryWeatherText === "Clear") {
+// 	dayImg = sunnyIMG;
+// } else if (summaryWeatherText === "Clouds") {
+// 	dayImg = cloud;
+// }
 // let cardIMG = props.summaryWeather
 
 // switch (cardIMG) {

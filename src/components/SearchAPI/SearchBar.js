@@ -49,7 +49,7 @@ function SearchBar(props) {
 					weather: [
 						{
 							id: 800,
-							main: "Clear",
+							main: "Thunderstorm",
 							description: "clear sky",
 							icon: "01d",
 						},
@@ -128,7 +128,7 @@ function SearchBar(props) {
 					weather: [
 						{
 							id: 500,
-							main: "Rain",
+							main: "Snow",
 							description: "light rain",
 							icon: "10d",
 						},
@@ -168,7 +168,7 @@ function SearchBar(props) {
 					weather: [
 						{
 							id: 501,
-							main: "Rain",
+							main: "Mist",
 							description: "moderate rain",
 							icon: "10d",
 						},
@@ -208,7 +208,7 @@ function SearchBar(props) {
 					weather: [
 						{
 							id: 804,
-							main: "Clouds",
+							main: "Sand",
 							description: "overcast clouds",
 							icon: "04d",
 						},
@@ -247,7 +247,7 @@ function SearchBar(props) {
 					weather: [
 						{
 							id: 803,
-							main: "Clouds",
+							main: "Clear",
 							description: "broken clouds",
 							icon: "04d",
 						},
@@ -286,7 +286,7 @@ function SearchBar(props) {
 					weather: [
 						{
 							id: 800,
-							main: "Clear",
+							main: "Clouds",
 							description: "clear sky",
 							icon: "01d",
 						},
@@ -325,7 +325,7 @@ function SearchBar(props) {
 					weather: [
 						{
 							id: 803,
-							main: "Clouds",
+							main: "Dust",
 							description: "broken clouds",
 							icon: "04d",
 						},
