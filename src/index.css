@@ -8,9 +8,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	animation-name: backgroundImg;
-	/* 100s seems the a good amount of time */
-	animation-duration: 40000s;
-	/* 40s  */
+	animation-duration: 40s;
 	animation-iteration-count: infinite;
 }
 
@@ -44,8 +42,3 @@ body {
 #root {
 	margin-top: -2.5rem;
 }
-
-/* code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
-} */

@@ -1,7 +1,7 @@
 import "./Starter.css";
-import thunder from "../../img/testThunder.png";
-import snow from "../../img/testSnow.png";
-import clear from "../../img/testClear.png";
+import thunder from "../../img/thunderIcon.png";
+import snow from "../../img/Snow.png";
+import clear from "../../img/Clear.png";
 
 function Starter() {
 	let sunRise = <i className="fas fa-sun"></i>;
@@ -13,12 +13,12 @@ function Starter() {
 
 	return (
 		<>
-			{/* description of how the website works */}
+			{/* description of website  */}
 			<p className="center summaryText">
 				Here you can search the weather for the next 8 days of any city, simply
 				enter the city name. See below is an example of what you can expect.
 			</p>
-			{/* below will be an example of the results the user shoudl execpt */}
+			{/*  example of results */}
 			<div className="row spacing">
 				<div className="card center 1">
 					<h4 className="card-header ">Example - Monday</h4>

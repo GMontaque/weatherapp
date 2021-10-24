@@ -10,20 +10,11 @@ function CondtionalPage(props) {
 	// varaible is updated depending on if data is recevied
 	let weatherCards;
 
-	/* ---------------------------------------real card to use ----------------------------------------- */
-
-	// props.ApiDataObject
-
-	/* ---------------------------------------test card to use ----------------------------------------- */
-
-	if (props.ApiData === undefined) {
+	if (props.ApiDataObject === undefined) {
 		weatherCards = <Starter />;
 	} else {
 		weatherCards = (
 			<Card
-				// testcode --------------------------------------------
-				weatherData={props.ApiData}
-				// testcode above ----------------------------------
 				pageReset={buttonReset}
 				searchTitle={props.searchWord}
 				apiObject={props.ApiDataObject}
@@ -35,19 +26,3 @@ function CondtionalPage(props) {
 }
 
 export default CondtionalPage;
-
-//console.log("conditional data " + props.testApiData);
-
-// import { useState } from "react";
-// const [buttonCheck, setButtonCheck] = useState();
-
-// if (filteredExpense.length > 0) {
-// 	expensesContent = filteredExpense.map((expense) => (
-// 		<Card
-// 			key={expense.id}
-// 			title={expense.title}
-// 			amount={expense.amount}
-// 			date={expense.date}
-// 		/>
-// 	));
-// }

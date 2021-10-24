@@ -1,11 +1,11 @@
 import "./CardResult.css";
-import thunder from "../../img/testThunder.png";
-import rainImg from "../../img/testRain.png";
-import snow from "../../img/testSnow.png";
-import MSHFImg from "../../img/testFog.png";
-import sand from "../../img/testSand.png";
-import clear from "../../img/testClear.png";
-import cloud from "../../img/testCloud.png";
+import thunder from "../../img/thunderIcon.png";
+import rainImg from "../../img/Rain.png";
+import snow from "../../img/Snow.png";
+import MSHFImg from "../../img/Fog.png";
+import sand from "../../img/Sand.png";
+import clear from "../../img/Clear.png";
+import cloud from "../../img/Cloud.png";
 
 function CardResult(props) {
 	let sunRise = <i className="fas fa-sun"></i>;
@@ -111,66 +111,3 @@ function CardResult(props) {
 }
 
 export default CardResult;
-
-// if (imgResultWord === "Rain" || "Drizzle") {
-// 	dayImg = rainImg;
-// } else if (imgResultWord === "Snow") {
-// 	dayImg = snow;
-// } else if (imgResultWord === "Mist" || "Smoke" || "Haze") {
-// 	dayImg = heavyRain;
-// } else if (imgResultWord === "Dust" || "Sand") {
-// 	dayImg = sun;
-// } else if (imgResultWord === "Fog") {
-// 	dayImg = sun;
-// } else if (imgResultWord === "Clear") {
-// 	dayImg = sunnyIMG;
-// } else if (imgResultWord === "Clouds") {
-// 	dayImg = cloud;
-// }
-
-// if (summaryWeatherText === "Thunderstorm") {
-// 	dayImg = thunder;
-// }
-// else if (summaryWeatherText === "Rain" || "Drizzle") {
-// 	dayImg = rainImg;
-// }
-// else if (summaryWeatherText === "Snow") {
-// 	dayImg = snow;
-// } else if (summaryWeatherText === "Mist" || "Smoke" || "Haze") {
-// 	dayImg = heavyRain;
-// } else if (summaryWeatherText === "Dust" || "Sand") {
-// 	dayImg = thunder;
-// } else if (summaryWeatherText === "Fog") {
-// 	dayImg = sun;
-// } else if (summaryWeatherText === "Clear") {
-// 	dayImg = sunnyIMG;
-// } else if (summaryWeatherText === "Clouds") {
-// 	dayImg = cloud;
-// }
-// let cardIMG = props.summaryWeather
-
-// switch (cardIMG) {
-// 	case sunny:
-// 		// code block
-// 		break;
-// 	case cloud:
-// 		// code block
-// 		break;
-// 	case rain:
-// 		// code block
-// 		break;
-// 	case snow:
-// 		// code block
-// 		break;
-// 	case thunder:
-// 		// code block
-// 		break;
-// 	case heavyrain:
-// 		// code block
-// 		break;
-// 	case sunnnyandcloudy:
-// 		// code block
-// 		break;
-// 	default:
-// 	// code block
-// }
