@@ -28,6 +28,10 @@
 	padding-bottom: 2rem;
 }
 
+.titleSize:first-letter {
+	text-transform: capitalize;
+}
+
 @media (max-width: 1025px) {
 	.titleSize {
 		font-size: 4rem;
