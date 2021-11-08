@@ -21,7 +21,7 @@ function Starter() {
 			{/*  example of results */}
 			<div className="row spacing">
 				<div className="card center 1">
-					<h4 className="card-header ">Example - Monday</h4>
+					<h4 className="card-header ">Monday</h4>
 					<img
 						src={thunder}
 						className="rounded-circle img"
@@ -34,21 +34,21 @@ function Starter() {
 						{/* weather summary for the day */}
 
 						<div className="tempLayout ">
-							<p className="marginR">{sunRise} 07:23am</p>
-							<p>{sunSet} 19:44pm</p>
+							<p className="marginR">{sunRise} 07:23</p>
+							<p>{sunSet} 19:44</p>
 						</div>
 						<div className="inner-Text list-group">
 							<p className="list-group-item">
-								{tempHigh}: 23C - {tempLow} 1C
+								{tempHigh}: 23C - {tempLow}: 12C
 							</p>
-							<p className="list-group-item">{wind} 10KMH</p>
-							<p className="list-group-item">{rain} 20%</p>
+							<p className="list-group-item">{wind} 22 Km/h</p>
+							<p className="list-group-item">{rain} 20 mm</p>
 						</div>
 					</div>
 				</div>
 
 				<div className="card center 2">
-					<h4 className="card-header ">Example - Tuesday</h4>
+					<h4 className="card-header ">Tuesday</h4>
 					<img
 						src={clear}
 						className="rounded-circle img"
@@ -61,21 +61,21 @@ function Starter() {
 						{/* weather summary for the day */}
 
 						<div className="tempLayout ">
-							<p className="marginR">{sunRise} 07:23am</p>
-							<p>{sunSet} 19:44pm</p>
+							<p className="marginR">{sunRise} 08:57</p>
+							<p>{sunSet} 22:44</p>
 						</div>
 						<div className="inner-Text list-group">
 							<p className="list-group-item">
-								{tempHigh}: 23C - {tempLow} 1C
+								{tempHigh}: 10C - {tempLow}: 1C
 							</p>
-							<p className="list-group-item">{wind} 10KMH</p>
-							<p className="list-group-item">{rain} 20%</p>
+							<p className="list-group-item">{wind} 05 Km/h</p>
+							<p className="list-group-item">{rain} 10 mm</p>
 						</div>
 					</div>
 				</div>
 
 				<div className="card center 3">
-					<h4 className="card-header ">Example - Wednesday</h4>
+					<h4 className="card-header ">Wednesday</h4>
 					<img
 						src={snow}
 						className="rounded-circle img"
@@ -88,15 +88,15 @@ function Starter() {
 						{/* weather summary for the day */}
 
 						<div className="tempLayout ">
-							<p className="marginR">{sunRise} 07:23am</p>
-							<p>{sunSet} 19:44pm</p>
+							<p className="marginR">{sunRise} 09:23</p>
+							<p>{sunSet} 16:44</p>
 						</div>
 						<div className="inner-Text list-group">
 							<p className="list-group-item">
-								{tempHigh}: 23C - {tempLow} 1C
+								{tempHigh}: 3C - {tempLow}: -6C
 							</p>
-							<p className="list-group-item">{wind} 10KMH</p>
-							<p className="list-group-item">{rain} 20%</p>
+							<p className="list-group-item">{wind} 15 Km/h</p>
+							<p className="list-group-item">{rain} 05 mm</p>
 						</div>
 					</div>
 				</div>

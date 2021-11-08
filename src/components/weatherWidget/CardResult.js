@@ -88,21 +88,22 @@ function CardResult(props) {
 
 				<div className="tempLayout ">
 					<p className="marginR">
-						{sunRise} {extractedSunRise}am
+						{sunRise} {extractedSunRise}
 					</p>
 					<p>
-						{sunSet} {extractedSunSet}pm
+						{sunSet} {extractedSunSet}
 					</p>
 				</div>
 				<div className="inner-Text list-group">
 					<p className="list-group-item">
-						{tempHigh}: {props.tempMax}C - {tempLow} {props.tempMin}C
+						{tempHigh}: {Math.round(props.tempMax)}C - {tempLow}:{" "}
+						{Math.round(props.tempMin)}C
 					</p>
 					<p className="list-group-item">
-						{wind} {props.windSpeed}KMH
+						{wind} {Math.round(props.windSpeed)} Km/h
 					</p>
 					<p className="list-group-item">
-						{rain} {rainValueMM} MM
+						{rain} {rainValueMM} mm
 					</p>
 				</div>
 			</div>
