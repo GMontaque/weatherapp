@@ -1,6 +1,6 @@
 import "./Starter.css";
 import thunder from "../../img/thunderIcon.png";
-import snow from "../../img/Snow.png";
+import snow from "../../img/snow.png";
 import clear from "../../img/Clear.png";
 
 function Starter() {

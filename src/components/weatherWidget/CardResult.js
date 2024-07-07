@@ -1,11 +1,11 @@
 import "./CardResult.css";
 import thunder from "../../img/thunderIcon.png";
-import rainImg from "../../img/Rain.png";
-import snow from "../../img/Snow.png";
+import rainImg from "../../img/rain.png";
+import snow from "../../img/snow.png";
 import MSHFImg from "../../img/Fog.png";
 import sand from "../../img/Sand.png";
 import clear from "../../img/Clear.png";
-import cloud from "../../img/Cloud.png";
+import cloud from "../../img/cloud.png";
 
 function CardResult(props) {
 	let sunRise = <i className="fas fa-sun"></i>;
